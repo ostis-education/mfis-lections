@@ -1,0 +1,3 @@
+[submodule "scn-slides"]
+	path = scn-slides
+	url = https://github.com/ostis-ai/scn-slides
