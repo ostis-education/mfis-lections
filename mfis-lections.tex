@@ -1,0 +1,50 @@
+\documentclass{beamer}
+
+\graphicspath{{scn-slides//}{figures//}}
+
+\makeatletter
+\def\input@path{{scn-slides}}
+\makeatother
+
+\usepackage{scn-slides}
+
+\begin{document}
+
+\title{Курс лекций по дисциплине\\ Математические основы интеллектуальных систем}   
+\author[]{Шункевич Д.В.}
+\institute[]{Белорусский государственный университет информатики и радиоэлектроники}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+%Knowledge representation
+\input{part1/ostis_basics}
+\input{part1/sc_code}
+\input{part1/external_constructions}
+\input{part1/external_langs}
+\input{part1/sets}
+\input{part1/relations}
+\input{part1/parameters}
+\input{part1/structures}
+\input{part1/logic}
+\input{part1/correspondences}
+\input{part1/scp}
+
+%KB development
+\input{part2/subject_domains}
+\input{part2/ontologies}
+\input{part2/kb_develop_principles}
+\input{part2/structuring}
+\input{part2/kb_develop_methods}
+
+%Procedural knowledge
+\input{part3/temp_entities}
+\input{part3/actions}
+\input{part3/problems}
+\input{part3/methods_skills}
+\input{part3/problem_solvers}
+\input{part3/multiagent_processing}
+\input{part3/problem_solving_methods}
+
+\end{document}
