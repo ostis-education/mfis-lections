@@ -10,98 +10,128 @@
 	\topline
 	\justifying
 	\begin{itemize}
-	\item[--] Основные положения базового языка представления знаний в интеллектуальных системах – SC-кода. 
-	\item[--] Алфавит, синтаксис, базовая денотационная семантика SC-кода. 
-	\item[--] Синтаксическая и семантическая классификация sc-элементов.
+	\item Основные положения базового языка представления знаний в интеллектуальных системах – SC-кода. 
+	\item Алфавит, синтаксис, базовая денотационная семантика SC-кода. 
+	\item Синтаксическая и семантическая классификация sc-элементов.
 	\end{itemize}
 \end{frame}
 
-
 \begin{frame}{\\Semantic Computer code = SC-code}
-	SC-code основан на \textit{теории графов} (синтаксис) и \textit{теории множеств} (семантика), что позволяет единообразно представлять различные виды знаний, удобно их хранить и обрабатывать.
+	\vspace{10mm}
+	\begin{SCn}
+	\scnheader{Sc-code} 
+	\scnidtf{способ универсального смыслового представления (кодирования) информации в памяти компьютерных систем}
+	\vspace{5mm}
+	SC-code основан на \textit{теории графов} (синтаксис) и \textit{теории множеств} (семантика), что обеспечивает универсальность и унифицированность (единообразие) представления информации, удобство машинной обработки и восприятия человеком.
+	\end{SCn}
 \end{frame}
 
 \begin{frame}{\\Сравнение языков представления знаний и информации}
-	\begin{columns}[T,onlytextwidth]
-		\begin{column}{0.5\textwidth}
-			\begin{itemize}
-				\item Язык с алфавитом \{0, 1\}
-				\begin{itemize}
-					\item[--] не удобен для человека
-					\item[--] удобен для обработки в компьютере
-					\item[--] нельзя понять информацию без контекста
-					\item[--] легко реализовать
-				\end{itemize}
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.5\textwidth}
-			\begin{itemize}
-				\item SC-code
-				\begin{itemize}
-					\item[--] удобен для человека
-					\item[--] удобен для обработки в компьютере
-					\item[--] обладает «осмысленностью»
-				\end{itemize}
-			\end{itemize}
-		\end{column}
-	\end{columns}
-	\vspace{5mm}
-	Переход к "новому качеству" в области информационных технологий будет обусловлен переходом от обработки данных к обработке знаний.
-	\\ From data science to knowledge science
-\end{frame}
-
-\begin{frame}{\\Формы внешнего представления SC-кода}
 	\vspace{10mm}
 	\begin{columns}[T,onlytextwidth]
 		\begin{column}{0.5\textwidth}
 			\begin{itemize}
-				\item SCs -- Semantic Code string \\ (Язык линейного представления знаний) \vspace{10mm}
-				\item SCn -- Semantic Code natural \\ (Язык структурированного представления знаний) \vspace{10mm}
-				\item SCg -- Semantic Code graphic \\ (Язык графического представления знаний) 
+				\item[] Двоичное кодирование
+				\begin{itemize}
+					\item алфавит \{0, 1\}
+					\item не удобен для человека
+					\item удобен для обработки в компьютере
+					\item нельзя понять информацию без контекста
+					\item легко реализовать
+				\end{itemize}
 			\end{itemize}
 		\end{column}
-		\begin{column}{0.56\textwidth}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item[] SC-code
+				\begin{itemize}
+					\item базовый алфавит состоит из 5 элементов
+					\item удобен для человека
+					\item удобен для обработки в компьютере
+					\item обладает «осмысленностью»
+				\end{itemize}
+			\end{itemize}
+		\end{column}
+	\end{columns}
+    \vspace{5mm}
+	Переход к "новому качеству" в области информационных технологий будет обусловлен переходом от обработки данных к обработке знаний.
+	\\ \textit{From data science to knowledge science}
+\end{frame}
+
+\begin{frame}{\\Формы внешнего представления SC-кода}
+	\vspace{10mm}
+	С помощью SC-кода можно описывать базы знаний, решатели задач и интерфейс интеллектуальной системы. \\ \vspace{5mm}
+	SC-code является абстрактным языком, который находится в памяти компьютерной системы. Но его можно визуализировать в различных формах. \\ \vspace{5mm}
+	Универсальными формами являются SCg-code (графический), SCn-code(гипертекстовый), SCs-code(текстовый линейный).
+\end{frame}
+
+\begin{frame}{\\Формы внешнего представления SC-кода}
+	\begin{columns}[T,onlytextwidth]
+		\begin{column}{0.4\textwidth}
+				\begin{SCn}
+					\scnheader{SCs}
+					\scnidtf{Semantic Code string}
+					\scnidtf{Язык линейного представления знаний}
+				
+					\scnheader{SCn}
+					\scnidtf{Semantic Code natural}
+					\scnidtf{Язык структурированного представления знаний}
+					
+					\scnheader{SCg}
+					\scnidtf{Semantic Code graphic}
+					\scnidtf{Язык графического представления знаний}
+				\end{SCn}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\vspace{10mm}
 			\includegraphics[width=50mm]{./part1/pictures/ostis-basics-1.png}
 		\end{column}
 	\end{columns}
 \end{frame}
 
-\begin{frame}{\\Информация VS знания}
+\begin{frame}{\\Данные, информация, знания}
 	\vspace{10mm}
-	Данные -- набор значений (фактов, цифр и т.д.)\\
-	Пример: статистика кликов пользователя на элементы управления заданного сайта \\
-	\vspace{5mm}
-	Информация -- любые сведения об окружающем мире независимо от формы их представления \\
-	Пример: голосовое сообщение \\
-	Пример: номер телефона \\
-	\vspace{5mm}
-	Знания -- семантически и синтаксически целостная информация \\
-	Пример: теорема Пифагора \\
-	Пример: рецепт приготовления торта «Наполеон»
+	\begin{SCn}
+	\scnheader{данные}
+	\scnidtf{набор значений (фактов, цифр и т.д.)}
+
+	\scnheader{информация}
+	\scnidtf{любые сведения об окружающем мире независимо от формы их представления}
+
+	\scnheader{знания}
+	\scnidtf{семантически и синтаксически целостная информация}
+	\end{SCn}
 \end{frame}
-
-
-
-
-\begin{frame}{\\Информация VS знания}
-	\vspace{10mm}
-	\begin{columns}[T,onlytextwidth]
-		\begin{column}{0.5\textwidth}
-			\vspace{20mm}
-			Одна из ключевых отличительных особенностей знаний – интерпретируемость. \\
-			(Дмитрий Александрович Поспелов)
-		\end{column}
-		\begin{column}{0.5\textwidth}
-			\includegraphics[width=50mm]{./part1/pictures/sc-code-pospelov.jpg}
-		\end{column}
-	\end{columns}
-\end{frame}
-
 
 \begin{frame}{\\Семантические сети}
-	Семантическая сеть -- граф, вершины которого являются знаками некоторых сущностей, а дуги (ребра) – знаками связей между этими сущностями
-	\\
-	Семантика знака -- отношение между знаком и сущностью (значением знака, денотатом), которую он обозначает.
-	\\
-	\includegraphics[width=50mm]{./part1/pictures/sc-code-cat.jpg}
+	\vspace{10mm}
+	\begin{SCn}
+	\scnheader{семантическая сеть}
+	\scnidtf{граф, вершины которого являются знаками некоторых сущностей, а дуги (ребра) – знаками связей между этими сущностями}
+	\scnheader{семантика знака}
+	\scnidtf{отношение между знаком и сущностью (значением знака, денотатом), которую он обозначает}
+	\begin{center}
+		\includegraphics[width=60mm]{./part1/pictures/sc-code-cat.jpg}
+	\end{center}
+	\end{SCn}
 \end{frame}
+
+\begin{frame}{\\Семантические сети}
+	\vspace{10mm}
+		\begin{center}
+			\includegraphics[width=90mm]{./part1/pictures/sc-code-web.jpg}
+		\end{center}
+\end{frame}
+
+\begin{frame}{\\Алфавит SCg-code}
+	
+\end{frame}
+
+
+
+
+
+
+
+
+
