@@ -112,6 +112,63 @@
 	\end{SCn}
 \end{frame}
 
+\begin{frame}{\\Cинтаксис. Алфавит SC-code}
+	\begin{SCn}
+		\scnheader{алфавит SC-кода}
+		\scnidtf{семейство синтаксических меток, приписываемых sc-элементам и указывающих факт принадлежности sc-элемента к соответствующему классу sc-элементов}
+		
+		\scnheader{минимальный алфавит SC-кода}
+		\scnrelfrom{пояснение}{ Для понимания sc-конструкций, хранимых в sc-памяти, достаточно синтаксически выделить только \textbf{Класс константных постоянных позитивных sc-пар принадлежности (Класс базовых sc-дуг)}, с помощью которых каждый sc-элемент будет явно соединяться с sc-классами, которым этот sc-элемент принадлежит. Очевидно, что таким явным способом выделить базовые sc-дуги с помощью самих этих базовых sc-дуг	невозможно.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Минимальный алфавит SC-кода}
+	\begin{SCn}
+		Таким образом, любой класс sc-элементов можно выделить явно путём:\\
+		\begin{textitemize}
+			\item{введения sc-элемента, являющегося знаком этого класса sc-элементов (sc-класса);}
+			\item{проведения постоянных позитивных sc-пар принадлежности во все sc-элементы, являющиеся элементами
+			выделяемого sc-класса и хранимые (присутствующие) в текущем состоянии sc-памяти.}
+		\end{textitemize}
+	
+		\scnheader{минимальный алфавит SC-кода}
+		\scnidtf{Класс базовых sc-дуг и Класс всех остальных sc-элементов (по умолчанию)}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Алфавит Ядра SC-кода}
+	\begin{SCn}
+		\begin{columns}[T,onlytextwidth]
+			\begin{column}{0.7\textwidth}
+				\vspace{5mm}
+				\scnheader{Алфавит Ядра SC-кода}
+				\begin{scneqtoset}
+					\scnitem{sc-узел, являющийся знаком файла}
+					\scnitem{sc-узел, не являющийся знаком файла}
+					\scnitem{базовая sc-дуга}
+					\scnitem{sc-ребро}
+					\scnitem{sc-дуга общего вида}
+				\end{scneqtoset}
+			\end{column}
+			\begin{column}{0.3\textwidth}
+				\begin{figure}[H]
+					\includegraphics[scale=0.7]{./figures/sd_sc_code/abc.png}
+				\end{figure}
+			\end{column}
+		\end{columns}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\}
+	\begin{SCn}
+		\scnheader{sc-ребро}
+		\scnidtf{Класс sc-элементов, имеющих в рамках Ядра SC-кода синтаксическую метку обозначений неориентированной sc-пары}
+
+		\scnheader{sc-узел, не являющийся знаком файла}
+		\scnidtf{sc-узел общего вида}
+	\end{SCn}
+\end{frame}
+
 \begin{frame}{\\SC-сущности}
 	\vspace{7mm}
 	\begin{SCn}
@@ -174,7 +231,7 @@
 	\end{SCn}
 \end{frame}
 
-\begin{frame}{\\Семантическая классификация sc-элементов}
+\begin{frame}{\\Базовая денотационная семантика SC-кода. Семантическая классификация sc-элементов}
 	К числу базовых признаков классификации \textit{sc-элементов} относятся:
 	\begin{textitemize}
 		\item структурный признак;
@@ -259,40 +316,27 @@
 \end{frame}
 
 \begin{frame}{\\Логико-семантическая классификация}
-	\vspace{5mm}
-	\begin{SCn}
-		\scnheader{sc-элемент}
-		\begin{scneqtoset}
+\begin{SCn}
+	\scnheader{Логико-семантическая классификация sc-элементов}
+	\scnstartstruct
+	\scnheader{sc-элемент}
+		\begin{scnrelfromset}{разбиение}
 			\scnitem{sc-константа}
 				\begin{scnindent}
-				\scnidtf{sc-элемент, логико-семантическим значением которого является он сам}
+					\scnidtf{sc-элемент, логико-семантическим значением которого является он сам}
 				\end{scnindent}
 			\scnitem{sc-переменная}
-				\begin{scnindent}
-				\begin{scneqtoset}
-					\scnitem{sc-переменная 1-го уровня}
-						\begin{scnindent}
-						\scnidtf{sc-элемент, областью возможных значений которого является множество sc-констант}
-						\end{scnindent}
-					\scnitem{sc-переменная 2-го уровня}
-						\begin{scnindent}
-						\scnidtf{sc-элемент, возможными значениями которого являются переменные 1-го уровня}
-						\end{scnindent}
-					\scnitem{sc-переменная универсального типа}
-						\begin{scnindent}
-						\scnidtf{sc-переменная, на значения которой не накладывается никаких ограничений}
-						\end{scnindent}
-				\end{scneqtoset}
-				\end{scnindent}
-		\end{scneqtoset}	
-	\end{SCn}
+		\end{scnrelfromset}	
+\scnendstruct 
+\end{SCn}
 \end{frame}
 
-\begin{frame}{\\Классификация темпоральная}
-	\vspace{8mm}
-	\begin{SCn}
-		\scnheader{sc-элемент}
-		\scnrelfrom{разбиение}{Признак постоянства существования сущностей, обозначаемых sc-элементами}
+\begin{frame}{\\Классификация по темпоральным характеристикам}%Возможно лишнее
+\begin{SCn}
+	\scnheader{Классификация sc-элементов по темпоральным характеристикам обозначаемых ими сущностей}
+	\scnstartstruct
+	\scnheader{sc-элемент}
+	\scnrelfrom{разбиение}{Признак постоянства существования сущностей, обозначаемых sc-элементами}
 		\begin{scnindent}
 			\begin{scneqtoset}
 				\scnitem{обозначение постоянной сущности}
@@ -300,33 +344,78 @@
 					\scnidtf{обозначение постоянно существующей сущности}
 				\end{scnindent}
 				\scnitem{обозначение временной сущности}
+			\end{scneqtoset}
+		\end{scnindent} 
+	\scnendstruct 
+\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Признак статичности сущностей}%Возможно лишнее
+	\begin{SCn}
+		\scnheader{sc-элемент}
+		\scnrelfrom{разбиение}{Признак статичности сущностей, обозначаемых sc-элементами}
+		\begin{scnindent}
+			\begin{scneqtoset}
+				\scnitem{обозначение статической сущности}
 				\begin{scnindent}
-					\begin{scneqtoset}
-						\scnitem{обозначение внешней временной сущности}
-						\begin{scnindent}
-							\scnsuperset{обозначение внешней ситуации}
-							\scnsuperset{обозначение внешнего события}
-							\scnsuperset{обозначение внешнего процесса}
-						\end{scnindent}
-						\scnitem{обозначение внутренней временной сущности}
-						\begin{scnindent}
-							\begin{scneqtoset}
-								\scnitem{обозначение события в sc-памяти}
-								\scnitem{обозначение инф. процесса в sc-памяти}
-							\end{scneqtoset}
-						\end{scnindent}
-					\end{scneqtoset}
+					\scnidtf{обозначение статичной сущности}
+					\scnidtf{обозначение стационарной сущности}
+					\scnidtf{обозначение сущности, изменения которой в рамках соответствующего отрезка времени считаются несущественными}
+					\scnsuperset{обозначение статического sc-множества}
+				\end{scnindent}
+				\scnitem{обозначение динамической сущности}
+				\begin{scnindent}
+					\scnidtf{обозначение сущности изменяющейся во времени}
+					\scnsuperset{обозначение динамического sc-множетсва}
 				\end{scnindent}
 			\end{scneqtoset}
 		\end{scnindent} 
-		
 	\end{SCn}
 \end{frame}
 
-\begin{frame}{\\}
-	\vspace{10mm}
+\begin{frame}{\\Обозначение временной сущности}%Возможно лишнее
 	\begin{SCn}
-			Когда речь идёт о темпоральных свойствах sc-элементов, следует чётко отличать:
+		\scnheader{обозначение временной сущности}
+		\begin{scnindent}
+			\begin{scnrelfromset}{разбиение}
+				\scnitem{обозначение внешней временной сущности}
+				\begin{scnindent}
+					\scnsuperset{обозначение внешней ситуации}
+					\scnsuperset{обозначение внешнего события}
+					\scnsuperset{обозначение внешнего процесса}
+				\end{scnindent}
+				\scnitem{обозначение внутренней временной сущности в sc-памяти}
+			\end{scnrelfromset}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Обозначение внутренней временной сущности в sc-памяти}%Возможно лишнее
+	\begin{SCn}
+		\scnheader{обозначение внутренней временной сущности в sc-памяти}
+		\begin{scnindent}
+			\begin{scnrelfromset}{разбиение}
+				\scnitem{обозначение ситуации в sc-памяти}
+				\begin{scnindent}
+					\scnidtf{обозначение ситуации, которая возникла или возникает в процессе обработки информации в sc-памяти}
+				\end{scnindent}
+				\scnitem{обозначение события в sc-памяти}
+				\begin{scnindent}
+					\scnidtf{обозначение события, которое произошло или произойдет в процессе обработки информации в sc-памяти}
+				\end{scnindent}
+				\scnitem{обозначение информационного процесса в sc-памяти}
+				\begin{scnindent}
+					\scnidtf{обозначение внутреннего процесса в sc-памяти, который происходит, произошёл или будет происходить}
+				\end{scnindent}
+			\end{scnrelfromset}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Темпоральные свойства sc-элементов}%Возможно лишнее
+	\vspace{15mm}
+	\begin{SCn}
+		\textbf{Когда речь идёт о темпоральных свойствах sc-элементов, следует чётко отличать:}
 		\begin{textitemize}
 			\item временный характер присутствия любого sc-элемента в составе той базы знаний, в которой он находится 
 			\item временный характер присутствия в sc-памяти всей заданной sc-конструкции  (ситуации в sc-памяти);
@@ -347,76 +436,106 @@
 	\end{SCn}
 \end{frame}
 
-\begin{frame}{\\}
+\begin{frame}{\\Структурная классификация sc-констант}
+\begin{SCn}
+	\scnheader{Структурная классификация sc-констант}
+	\scnstartstruct
+	\scnheader{sc-константа}
+	\begin{scnrelfromset}{разбиение}
+		\scnitem{sc-множество}
+		\scnitem{внешняя сущность}
+	\end{scnrelfromset}
+	
+\scnendstruct
+\end{SCn}\end{frame}
+
+\begin{frame}{\\Внешняя сущность}
 	\begin{SCn}
-		\scnheader{sc-константа}
-		\begin{scneqtoset}
-			\scnitem{sc-множество}
-				\begin{scnindent}
-				\begin{scneqtoset}
-					\scnitem{sc-связка}
-					\scnitem{sc-класс}
-					\scnitem{sc-структура}
-				\end{scneqtoset}
-				\end{scnindent}
-			\scnitem{внешняя сущность}
-				\begin{scnindent}
-					\scnidtf{sc-элемент, являющийся знаком внешней сущности}
-					\scnidtf{знак внешней сущности}
-					\scnidtf{знак сущности, не являющейся sc-множеством}
-				\end{scnindent} 
+		\scnheader{внешняя сущность}
 			\begin{scnindent}
-				\begin{scneqtoset}
+				\scnidtf{sc-элемент, являющийся знаком внешней сущности}
+				\scnidtf{знак внешней сущности}
+				\scnidtf{знак сущности, не являющейся sc-множеством (sc-конструкцией)}
+			\end{scnindent} 
+			\begin{scnindent}
+			\begin{scnrelfromset}{разбиение}
 					\scnitem{файл}
 					\scnitem{внутренний файл}
-					\scnitem{внешняя сущность (не внутренний файл)}
-					\scnitem{внешняя сущность (не информационной конструкцией)}
-					\scnitem{информационная конструкция (не sc-множество и не файл)}
-				\end{scneqtoset}
-			\end{scnindent}
-		\end{scneqtoset}
-		
-	\end{SCn}
-\end{frame}
-
-\begin{frame}{\\}
-	\begin{SCn}
-		\scnheader{sc-связка}
-			\begin{scnindent}
-			\begin{scneqtoset}
-				\scnitem{sc-синглетон}
-				\scnitem{sc-пара}
-					\begin{scnindent}
-					\begin{scneqtoset}
-						\scnitem{неориентированная sc-пара}
-						\scnitem{ориентированная sc-пара}
-						\scnitem{ориентированнная sc-пара, не являющаяся sc-парой принадлежности}	
-						\end{scneqtoset}
-						\end{scnindent}
-				\scnitem{sc-связка, не являющаяся синглетоном и парой}
-			\end{scneqtoset}
+					\scnitem{внешняя сущность, не являющаяся внутренним файлом}
+					\scnitem{внешняя сущность, не являющаяся информационной конструкцией}
+					\scnitem{информационная конструкция, не являющаяся ни sc-множеством, ни файлом}
+			\end{scnrelfromset}
 			\end{scnindent}
 	\end{SCn}
 \end{frame}
 
-\begin{frame}{\\}
+\begin{frame}{\\SC-множество}
 	\begin{SCn}
-			\scnheader{ориентированная sc-пара}
+		\scnheader{sc-множество}
 			\begin{scnindent}
-			\begin{scneqtoset}
-				\scnitem{sc-пара принадлежности}
+			\begin{scnrelfromset}{разбиение}
+				\scnitem{sc-связка}
 					\begin{scnindent}
-					\begin{scneqtoset}
-						\scnitem{sc-пара нечёткой принадлежности}
-						\scnitem{sc-пара позитивной принадлежности}
-						\scnitem{sc-пара негативной принадлежности}
-					\end{scneqtoset}
+					\begin{scnrelfromset}{разбиение}
+						\scnitem{sc-синглетон}
+						\scnitem{sc-пара}
+						\scnitem{sc-связка, не являющаяся синглетоном и парой}
+					\end{scnrelfromset}
 					\end{scnindent}
-				\scnitem{ориентированнная sc-пара, не являющаяся sc-парой принадлежности}	
-			\end{scneqtoset}
+				\scnitem{sc-класс}
+				\scnitem{sc-структура}
+			\end{scnrelfromset}
 			\end{scnindent}
-
-
 	\end{SCn}
 \end{frame}
 
+\begin{frame}{\\SC-пара}
+	\vspace{5mm}
+	\begin{SCn}
+		\scnheader{sc-пара}
+		\begin{scnrelfromset}{разбиение}
+			\scnitem{неориентированная sc-пара}
+			\scnitem{ориентированная sc-пара}
+				\begin{scnindent}
+				\begin{scnrelfromset}{разбиение}
+					\scnitem{sc-пара принадлежности}
+						\begin{scnindent}
+						\begin{scnrelfromset}{разбиение}
+							\scnitem{sc-пара нечёткой принадлежности}
+							\scnitem{sc-пара позитивной принадлежности}
+							\scnitem{sc-пара негативной принадлежности}
+						\end{scnrelfromset}
+						\end{scnindent}
+					\scnitem{ориентированнная sc-пара, не являющаяся sc-парой принадлежности}	
+				\end{scnrelfromset}
+				\end{scnindent}
+		\end{scnrelfromset}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\SC-пара позитивной принадлежности}
+	\vspace{5mm}
+	\begin{SCn}
+		\scnheader{sc-пара позитивной принадлежности}	
+		\begin{scnindent}
+			\scnsuperset{sc-пара постоянной позитивной принадлежности}
+				\begin{scnindent}
+				\begin{scnreltoset}{пересечение множеств}
+					\scnitem{sc-константа}
+					\scnitem{постоянная сущность}
+					\scnitem{статическая сущность}
+					\scnitem{sc-пара позитивной принадлежности}	
+				\end{scnreltoset}
+				\end{scnindent}
+			\scnsuperset{sc-пара временной позитивной принадлежности}
+				\begin{scnindent}
+				\begin{scnreltoset}{пересечение множеств}
+					\scnitem{sc-константа}
+					\scnitem{временная сущность}
+					\scnitem{динамическая сущность}
+					\scnitem{sc-пара позитивной принадлежности}	
+				\end{scnreltoset}
+				\end{scnindent}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
