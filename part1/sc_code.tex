@@ -15,6 +15,8 @@
 \end{frame}
 
 \begin{frame}{\\SC-code}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{SC-code} 
 		\scnidtf{способ универсального смыслового представления (кодирования) информации в памяти компьютерных систем}
@@ -24,6 +26,8 @@
 \end{frame}
 
 \begin{frame}{\\Сравнение SC-code и двоичного кодирования}
+	\topline
+	\justifying
 	\vspace{10mm}
 	\begin{textitemize}
 		\item Двоичное кодирование
@@ -45,6 +49,8 @@
 \end{frame}
 
 \begin{frame}{\\Формы представления SC-кода}
+	\topline
+	\justifying
 	\vspace{10mm}
 	\begin{SCn}
 		\scnheader{SC-code}
@@ -61,7 +67,8 @@
 \end{frame}
 
 \begin{frame}{\\}
-	\vspace{5mm}
+	\topline
+	\justifying
 	\begin{columns}[T,onlytextwidth]
 		\begin{column}{0.4\textwidth}
 				\begin{SCn}
@@ -77,15 +84,17 @@
 				\end{SCn}
 		\end{column}
 		\begin{column}{0.5\textwidth}
-			\vspace{5mm}
+			\vspace{10mm}
 			\begin{figure}[H]
-				\includegraphics[scale=0.45]{./figures/sd_sc_code/ostis-basics-1.png}
+				\includegraphics[scale=0.3]{./figures/sd_sc_code/ostis-basics-1.png}
 			\end{figure}
 		\end{column}
 	\end{columns}
 \end{frame}
 
 \begin{frame}{\\Основные положения SC-code}
+	\topline
+	\justifying
 	\vspace{8mm}
 	\begin{SCn}
 		\scnheader{SC-code}
@@ -93,26 +102,30 @@
 		\scniselement{абстрактный язык}
 		\scniselement{графовый язык}
 		\begin{scnrelfromset}{основные положения}
-			\scnitem{знаки сущностей --  синтаксически элементарные (атомарные) фрагменты sc-текстов, такие знаки не имеют внутренней структуры}
+			\scnitem{знаки сущностей --  синтаксически элементарные фрагменты sc-текстов, такие знаки не имеют внутренней структуры}
 			\scnitem{информационные конструкции, не являющиеся sc-текстами, могут быть включены в базу знаний в виде файлов}
-			\scnitem{тексты sc-кода имеют нелинейную (графовую) структуру, так как каждый знак сущности входит в базу знаний однократно и имеет неограниченное количество связей с другими знаками сущностей}
+			\scnitem{тексты sc-кода имеют нелинейную структуру, так как каждый знак сущности входит в базу знаний однократно и имеет неограниченное количество связей с другими знаками сущностей}
 		\end{scnrelfromset}
 	\end{SCn}
 \end{frame}
 
 \begin{frame}{\\}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{SC-code}
 		\begin{scnrelfromset}{основные положения}
-			\scnitem{база знаний (в виде текста SC-кода) является графовой структурой, алфавит элементов которой включает в себя множество узлов, рёбер, дуг, базовых дуг, а также множество специальных узлов, каждый из которых имеет содержимое, являющееся файлом, хранящимся в памяти интеллектуальной компьютерной системы}
-			\scnitem{структурная особенность графовой структуры базы знаний заключается в том, что её дуги и ребра могут связывать не только узел с узлом, но и узел с ребром или дугой, ребро или дугу с другим ребром или дугой}
-			\scnitem{отсутствие синонимии осуществляется благодаря склеиванию (отождествлению) одинаковых sc-элементов}
+			\scnitem{база знаний является графовой структурой, алфавит элементов которой включает в себя множество узлов, рёбер, дуг, базовых дуг, а также множество специальных узлов (файлов)}
+			\scnitem{структурная особенность графовой структуры базы знаний заключается в том, что её дуги и ребра могут связывать не только узел с узлом, но и узел с ребром или дугой и т.д.}
+			\scnitem{отсутствие синонимии осуществляется благодаря склеиванию одинаковых sc-элементов}
 			\scnitem{sc-узлы, sc-ребра и sc-дуги являются обозначениями различных сущностей}
 		\end{scnrelfromset}
 	\end{SCn}
 \end{frame}
 
 \begin{frame}{\\Cинтаксис. Алфавит SC-code}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{алфавит SC-кода}
 		\scnidtf{семейство синтаксических меток, приписываемых sc-элементам и указывающих факт принадлежности sc-элемента к соответствующему классу sc-элементов}
@@ -123,6 +136,8 @@
 \end{frame}
 
 \begin{frame}{\\Минимальный алфавит SC-кода}
+	\topline
+	\justifying
 	\begin{SCn}
 		Таким образом, любой класс sc-элементов можно выделить явно путём:\\
 		\begin{textitemize}
@@ -137,6 +152,8 @@
 \end{frame}
 
 \begin{frame}{\\Алфавит Ядра SC-кода}
+	\topline
+	\justifying
 	\begin{SCn}
 		\begin{columns}[T,onlytextwidth]
 			\begin{column}{0.7\textwidth}
@@ -160,6 +177,8 @@
 \end{frame}
 
 \begin{frame}{\\}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{sc-ребро}
 		\scnidtf{Класс sc-элементов, имеющих в рамках Ядра SC-кода синтаксическую метку обозначений неориентированной sc-пары}
@@ -170,6 +189,8 @@
 \end{frame}
 
 \begin{frame}{\\SC-сущности}
+	\topline
+	\justifying
 	\vspace{7mm}
 	\begin{SCn}
 		\scnheader{ребро}
@@ -184,6 +205,8 @@
 \end{frame}
 
 \begin{frame}{\\}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{узел без содержимого}
 		\scnidtf{материальный объект, первичный абстрактный
@@ -201,6 +224,8 @@
 \end{frame}
 
 \begin{frame}{\\}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{денотационная семантика языка}
 	   	\scnidtf{семантические правила заданного языка}
@@ -220,6 +245,8 @@
 \end{frame}
 
 \begin{frame}{\\Общие правила идентификации sc-элементов}
+	\topline
+	\justifying
 	\vspace{10mm}
 	\begin{SCn}
 		\begin{textitemize}
@@ -231,12 +258,15 @@
 	\end{SCn}
 \end{frame}
 
-\begin{frame}{\\Базовая денотационная семантика SC-кода. Семантическая классификация sc-элементов}
+\begin{frame}{\\Базовая денотационная семантика SC-кода}
+	\topline
+	\justifying 
+	\textbf{Семантическая классификация sc-элементов}\\
 	К числу базовых признаков классификации \textit{sc-элементов} относятся:
 	\begin{textitemize}
 		\item структурный признак;
 		\item логико-семантический признак;
-		\item темпоральная характеристика сущностей, обозначаемых \textit{sc-элементами}, которая в свою очередь, включает в себя:
+		\item темпоральная характеристика сущностей, обозначаемых sc - элементами, которая в свою очередь, включает в себя:
 		\begin{textitemize}
 			\item постоянство или временность существования обозначаемой сущности;
 			\item статичность (стационарность) или динамичность (изменчивость) обозначаемой сущности.
@@ -245,6 +275,8 @@
 \end{frame}
 
 \begin{frame}{\\Структурная классификация sc-элементов}
+	\topline
+	\justifying 
 	\vspace{10mm}
 	\begin{SCn}
 		\scnheader{sc-элемент}
@@ -268,7 +300,9 @@
 \end{frame}
 
 \begin{frame}{\\}
-	\vspace{10mm}
+	\topline
+	\justifying 
+	\vspace{3mm}
 	\begin{SCn}
 		\scnheader{обозначение sc-множества}
 		\scnrelfrom{разбиение}{}
@@ -297,6 +331,8 @@
 \end{frame}
 
 \begin{frame}{\\}
+	\topline
+	\justifying 
 	\begin{SCn}
 		\scnheader{обозначение ориентированной sc-пары}
 		\begin{scnindent}
@@ -316,41 +352,47 @@
 \end{frame}
 
 \begin{frame}{\\Логико-семантическая классификация}
-\begin{SCn}
-	\scnheader{Логико-семантическая классификация sc-элементов}
-	\scnstartstruct
-	\scnheader{sc-элемент}
-		\begin{scnrelfromset}{разбиение}
-			\scnitem{sc-константа}
-				\begin{scnindent}
-					\scnidtf{sc-элемент, логико-семантическим значением которого является он сам}
-				\end{scnindent}
-			\scnitem{sc-переменная}
-		\end{scnrelfromset}	
-\scnendstruct 
-\end{SCn}
+	\topline
+	\justifying 
+	\begin{SCn}
+		\scnheader{Логико-семантическая классификация sc-элементов}
+		\scnstartstruct
+		\scnheader{sc-элемент}
+			\begin{scnrelfromset}{разбиение}
+				\scnitem{sc-константа}
+					\begin{scnindent}
+						\scnidtf{sc-элемент, логико-семантическим значением которого является он сам}
+					\end{scnindent}
+				\scnitem{sc-переменная}
+			\end{scnrelfromset}	
+	\scnendstruct 
+	\end{SCn}
 \end{frame}
 
-\begin{frame}{\\Классификация по темпоральным характеристикам}%Возможно лишнее
-\begin{SCn}
-	\scnheader{Классификация sc-элементов по темпоральным характеристикам обозначаемых ими сущностей}
-	\scnstartstruct
-	\scnheader{sc-элемент}
-	\scnrelfrom{разбиение}{Признак постоянства существования сущностей, обозначаемых sc-элементами}
-		\begin{scnindent}
-			\begin{scneqtoset}
-				\scnitem{обозначение постоянной сущности}
-				\begin{scnindent}
-					\scnidtf{обозначение постоянно существующей сущности}
-				\end{scnindent}
-				\scnitem{обозначение временной сущности}
-			\end{scneqtoset}
-		\end{scnindent} 
-	\scnendstruct 
-\end{SCn}
+\begin{frame}{\\}%Возможно лишнее
+	\topline
+	\justifying 
+	\begin{SCn}
+		\scnheader{Классификация sc-элементов по темпоральным характеристикам обозначаемых ими сущностей}
+		\scnstartstruct
+		\scnheader{sc-элемент}
+		\scnrelfrom{разбиение}{Признак постоянства существования сущностей, обозначаемых sc-элементами}
+			\begin{scnindent}
+				\begin{scneqtoset}
+					\scnitem{обозначение постоянной сущности}
+					\begin{scnindent}
+						\scnidtf{обозначение постоянно существующей сущности}
+					\end{scnindent}
+					\scnitem{обозначение временной сущности}
+				\end{scneqtoset}
+			\end{scnindent} 
+		\scnendstruct 
+	\end{SCn}
 \end{frame}
 
 \begin{frame}{\\Признак статичности сущностей}%Возможно лишнее
+	\topline
+	\justifying 
 	\begin{SCn}
 		\scnheader{sc-элемент}
 		\scnrelfrom{разбиение}{Признак статичности сущностей, обозначаемых sc-элементами}
@@ -374,6 +416,8 @@
 \end{frame}
 
 \begin{frame}{\\Обозначение временной сущности}%Возможно лишнее
+	\topline
+	\justifying 
 	\begin{SCn}
 		\scnheader{обозначение временной сущности}
 		\begin{scnindent}
@@ -390,7 +434,9 @@
 	\end{SCn}
 \end{frame}
 
-\begin{frame}{\\Обозначение внутренней временной сущности в sc-памяти}%Возможно лишнее
+\begin{frame}{\\}%Возможно лишнее
+	\topline
+	\justifying 
 	\begin{SCn}
 		\scnheader{обозначение внутренней временной сущности в sc-памяти}
 		\begin{scnindent}
@@ -413,7 +459,9 @@
 \end{frame}
 
 \begin{frame}{\\Темпоральные свойства sc-элементов}%Возможно лишнее
-	\vspace{15mm}
+	\topline
+	\justifying 
+	\vspace{10mm}
 	\begin{SCn}
 		\textbf{Когда речь идёт о темпоральных свойствах sc-элементов, следует чётко отличать:}
 		\begin{textitemize}
@@ -428,6 +476,8 @@
 \end{frame}
 
 \begin{frame}{\\Структурная классификация sc-констант}
+	\topline
+	\justifying 
 	\begin{SCn}
 			Данная классификация полностью аналогична Структурной классификации sc-элементов, в отличие от которой она описывает структурную классификацию только константных sc-элементов (sc-констант) \\
 			\scnheader{структурная классификация}
@@ -437,19 +487,24 @@
 \end{frame}
 
 \begin{frame}{\\Структурная классификация sc-констант}
-\begin{SCn}
-	\scnheader{Структурная классификация sc-констант}
-	\scnstartstruct
-	\scnheader{sc-константа}
-	\begin{scnrelfromset}{разбиение}
-		\scnitem{sc-множество}
-		\scnitem{внешняя сущность}
-	\end{scnrelfromset}
-	
-\scnendstruct
-\end{SCn}\end{frame}
+	\topline
+	\justifying 
+	\begin{SCn}
+		\scnheader{Структурная классификация sc-констант}
+		\scnstartstruct
+		\scnheader{sc-константа}
+		\begin{scnrelfromset}{разбиение}
+			\scnitem{sc-множество}
+			\scnitem{внешняя сущность}
+		\end{scnrelfromset}
+		
+	\scnendstruct
+	\end{SCn}
+\end{frame}
 
 \begin{frame}{\\Внешняя сущность}
+	\topline
+	\justifying 
 	\begin{SCn}
 		\scnheader{внешняя сущность}
 			\begin{scnindent}
@@ -470,6 +525,8 @@
 \end{frame}
 
 \begin{frame}{\\SC-множество}
+	\topline
+	\justifying 
 	\begin{SCn}
 		\scnheader{sc-множество}
 			\begin{scnindent}
@@ -490,6 +547,8 @@
 \end{frame}
 
 \begin{frame}{\\SC-пара}
+	\topline
+	\justifying 
 	\vspace{5mm}
 	\begin{SCn}
 		\scnheader{sc-пара}
@@ -514,6 +573,8 @@
 \end{frame}
 
 \begin{frame}{\\SC-пара позитивной принадлежности}
+	\topline
+	\justifying 
 	\vspace{5mm}
 	\begin{SCn}
 		\scnheader{sc-пара позитивной принадлежности}	

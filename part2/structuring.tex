@@ -13,6 +13,8 @@
 \end{frame}
 
 \begin{frame}{\\Структуризация базы знаний}
+	\topline
+	\justifying
 	\begin{SCn}
 		\textbf{Аспекты структуризации базы знаний}
 		\begin{textitemize}
@@ -27,6 +29,8 @@
 \end{frame}
 
 \begin{frame}{\\Понятие раздела базы знаний}
+	\topline
+	\justifying
 	База знаний каждой ostis-системы декомпозируется на разделы.\\
 	Понятие раздела представляет собой знак	множества всевозможных разделов, входящих в	состав различных баз знаний. \\ \vspace{10mm}
 	Каждый раздел является условно \textit{дидактически} выделяемым	фрагментом базы знаний, обладающим \textit{логической	целостностью и завершенностью.}\\
@@ -34,6 +38,8 @@
 \end{frame}
 
 \begin{frame}{\\Отношение, заданные на понятии раздела}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{отношения на множестве разделов}
 		\scnhaselement{декомпозиция раздела*}
@@ -51,6 +57,8 @@
 \end{frame}
 
 \begin{frame}{\\Типология разделов базы знаний}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{раздел}
 		\scnidtf{раздел базы знаний}
@@ -67,6 +75,8 @@
 \end{frame}
 
 \begin{frame}{\\}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{раздел-обоснование}
 		\scnidtf{формальный текст, обосновывающий разработку чего-либо, то есть постановку проблемы, указание недостатков существующих решений, достоинства предлагаемых решений и т.д.}
@@ -80,6 +90,8 @@
 \end{frame}
 
 \begin{frame}{\\}
+	\topline
+	\justifying
 	\begin{SCn}
 
 		\scnheader{раздел-описание предметной области}
@@ -91,6 +103,8 @@
 \end{frame}
 
 \begin{frame}{\\Иерархия разделов}%доделать
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{раздел базы знаний}
 		\scnrelfrom{примечание}{Иерархия разделов базы знаний, задается отношениями \textbf{частная предметная область*}, \textbf{частная предметная область и онтология*}, \textbf{дочерний раздел*}}
@@ -101,6 +115,8 @@
 \end{frame}
 
 \begin{frame}{\\Фрагмент базы знаний}
+	\topline
+	\justifying
 	\begin{SCn}
 		 \scnheader{выделенный фрагмент базы знаний}
 			 \begin{scnrelfromset}{разбиение}
@@ -121,6 +137,8 @@
 \end{frame}
 
 \begin{frame}{\\Раздел, сегмент, фрагмент базы знаний}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{раздел базы знаний}
 		\scnsuperset{предметная область и онтология}
@@ -139,12 +157,22 @@
 \end{frame}
 
 \begin{frame}{\\}
+	\topline
+	\justifying
 	\begin{SCn}
 		\begin{figure}[H]
-			\includegraphics[scale=0.25]{./figures/sd_structuring/segment.png}
+			\includegraphics[scale=0.3]{./figures/sd_structuring/segment.png}
 		\end{figure}
-	\begin{columns}[T,onlytextwidth]
-		\begin{column}{0.4\textwidth}
+	\end{SCn}
+\end{frame}
+
+
+\begin{frame}{\\}
+	\topline
+	\justifying
+	\begin{SCn}
+		\begin{columns}[T,onlytextwidth]
+			\begin{column}{0.4\textwidth}
 				\scnheader{Раздел 1}
 				\begin{scnrelfromset}{покрытие}
 					\scnitem{Сегмент 1}
@@ -152,16 +180,19 @@
 					\scnitem{Сегмент 3}
 					\scnitem{Сегмент 4}
 				\end{scnrelfromset}
-		\end{column}
-		\begin{column}{0.4\textwidth}
-			\scnheader{Раздел 1}
-			\scnsuperset{фрагмент}
-		\end{column}
-	\end{columns}
+			\end{column}
+			\begin{column}{0.4\textwidth}
+				\scnheader{Раздел 1}
+				\scnsuperset{фрагмент}
+			\end{column}
+		\end{columns}
 	\end{SCn}
 \end{frame}
 
+
 \begin{frame}{\\Выделенный фрагмент базы знаний}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{выделенный фрагмент базы знаний}
 		\begin{scnrelfromset}{разбиение}
@@ -181,6 +212,8 @@
 \end{frame}
 
 \begin{frame}{\\Пример}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{многоугольники}
 		\scniselement{семейство разделов}
@@ -206,7 +239,9 @@
 	\end{SCn}
 \end{frame}
 
-\begin{frame}{\\Отношения на множестве выделяемых фрагментов}
+\begin{frame}{Отношения на множестве выделяемых фрагментов}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{отношения на множестве выделяемых фрагментов}
 		\scnhaselement{контакенация сегментов*}
@@ -222,6 +257,8 @@
 \end{frame}
 
 \begin{frame}{\\}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{отношения на множестве выделяемых фрагментов}
 		\scnhaselement{аннотация*}
@@ -242,6 +279,8 @@
 \end{frame}
 
 \begin{frame}{\\}
+	\topline
+	\justifying
 	\begin{SCn}
 		\scnheader{отношения дидактического характера}
 		\scnrelfrom{пояснение}{Такие отношения являются избыточными, т.е. реальной необходимости в них нет, но с использование данных отношений позволяет представить знания более понятным способом для пользователя.}
@@ -249,7 +288,10 @@
 \end{frame}
 
 \begin{frame}{\\ПрО и онтологии верхнего уровня}%доделать
+	\topline
+	\justifying
 	\vspace{10mm}
+	
 	В предметных областях верхнего уровня классами объектов исследования являются наиболее общие (широкие) классы сущностей (категории). \\
 	Например:
 	\begin{textitemize}
