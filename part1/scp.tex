@@ -10,6 +10,7 @@
 	\topline
 	\justifying
 	Базовые принципы обработки знаний. 1-2-3-элементные конструкции. Произвольные конструкции, поиск и генерация по образцу. Основные положения языка SCP. Понятие scp-программы, scp-процесса, scp-оператора. Понятие scp-операнда, классификация scp-операндов, scp-переменная, scp-константа. Классификация scp-операторов. Организация условных и безусловных переходов, циклов. Реализация подпрограмм. Агентная scp-программа.
+	
 \end{frame}
 
 \begin{frame}{\\Понятие языка scp}%понятие scp-языка
@@ -32,6 +33,10 @@
 			
 			\textit{Язык SCP} рассматривается как ассемблер для семантического компьютера.}
 		\end{frame}
+
+\begin{frame}{sc-код}%sc-код
+	содержимое...
+\end{frame}
 	
 \begin{frame}{\\Абстрактная scp-машина}%абстрактная scp-машина
 		\topline
@@ -43,6 +48,85 @@
 		\end{SCn}
 			\scntext{примечание}{\textit{Абстрактная scp-машина} представляет собой интерпретатор \textit{scp-программ}, который должен являться частью \textit{платформы интерпретации sc-моделей компьютерных систем} (хотя в общем случае могут существовать варианты платформы, не содержащие такого интерпретатора, что, однако, не позволит использовать достоинства предлагаемой базовой модели}
 	\end{frame}
+
+\begin{frame}{\\структура}
+	\topline
+	\justifying
+	\begin{SCn}
+	\scnheader{структура}
+	\begin{scnrelfromset}{разбиение}
+	\scnitem{sc-конструкция нестандартного вида}
+	\scnitem{sc-конструкция стандартного вида}
+	\begin{scnrelfromset}{разбиение}
+		\scnitem{одноэлементная sc-конструкция}
+		\scnitem{трехэлементная sc-конструкция}
+		\scnitem{пятиэлементная sc-конструкция}
+	\end{scnrelfromset}	
+	\end{scnrelfromset}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\sc-конструкция нестандартного вида}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{sc-конструкция нестандартного вида}
+		\scntext{пояснение}{Каждая \textit{sc-конструкция нестандартного вида} состоит из произвольного количества \textit{sc-элементов} произвольного типа.}
+		\scnrelfrom{пример}{
+			\begin{center}
+				\includegraphics[width=18mm]{figures/sd_sets/pic_ps1.png}
+		\end{center}}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\sc-конструкция стандартного вида}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{sc-конструкция стандартного вида}
+		\scntext{пояснение}{В свою очередь, каждый элемент \textit{\mbox{sc-конструкции} стандартного вида} имеет свою условную строго фиксированную позицию в рамках этой \mbox{sc-конструкции} (первый элемент, второй элемент и т. д.). В зависимости от указанной позиции вводятся дополнительные ограничения на тип соответствующего \textit{sc-элемента}.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\одноэлементная sc-конструкция}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{одноэлементная sc-конструкция}
+		\scntext{пояснение}{Каждая \textit{одноэлементная sc-конструкция} состоит из одного \newline \textit{sc-элемента} произвольного типа.}
+		\scnrelfrom{пример}{
+			\begin{center}
+				\includegraphics[width=17mm]{figures/sd_sets/pic_ps2.png}
+		\end{center}}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\трёхэлемениная sc-конструкция}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{трехэлементная sc-конструкция}
+		\scntext{пояснение}{Каждая \textit{трехэлементная sc-конструкция} состоит из трех \newline \textit{sc-элементов}. Второй элемент всегда является \textit{sc-коннектором}, остальные элементы могут быть произвольного типа.}
+		\scnrelfrom{пример}{
+			\begin{center}
+				\includegraphics[width=35mm]{figures/sd_sets/pic_ps3.png}
+		\end{center}}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\пятиэлементная sc-конструкция}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{пятиэлементная sc-конструкция}
+		\scntext{пояснение}{Каждая \textit{пятиэлементная sc-конструкция} состоит из пяти \newline \textit{sc-элементов}. Второй и четвертый элементы обязательно являются \textit{sc-коннекторами}, остальные элементы могут быть произвольного типа.}
+		\scnrelfrom{пример}{
+			\begin{center}
+				\includegraphics[width=35mm]{figures/sd_sets/pic_ps4.png}
+		\end{center}}
+	\end{SCn}
+\end{frame}
+
 
 \begin{frame}{\\scp-программа}%scp-программа
 	\topline
