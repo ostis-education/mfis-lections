@@ -86,7 +86,7 @@
 		\scntext{пояснение}{Каждая \textit{sc-конструкция нестандартного вида} состоит из произвольного количества \textit{sc-элементов} произвольного типа.}
 		\scnrelfrom{пример}{
 			\begin{center}
-				\includegraphics[width=18mm]{figures/sd_sets/pic_ps1.png}
+				\includegraphics[width=18mm]{figures/sd_scp/pic_ps1.png}
 		\end{center}}
 	\end{SCn}
 \end{frame}
@@ -108,7 +108,7 @@
 		\scntext{пояснение}{Каждая \textit{одноэлементная sc-конструкция} состоит из одного \newline \textit{sc-элемента} произвольного типа.}
 		\scnrelfrom{пример}{
 			\begin{center}
-				\includegraphics[width=17mm]{figures/sd_sets/pic_ps2.png}
+				\includegraphics[width=17mm]{figures/sd_scp/pic_ps2.png}
 		\end{center}}
 	\end{SCn}
 \end{frame}
@@ -121,7 +121,7 @@
 		\scntext{пояснение}{Каждая \textit{трехэлементная sc-конструкция} состоит из трех \newline \textit{sc-элементов}. Второй элемент всегда является \textit{sc-коннектором}, остальные элементы могут быть произвольного типа.}
 		\scnrelfrom{пример}{
 			\begin{center}
-				\includegraphics[width=35mm]{figures/sd_sets/pic_ps3.png}
+				\includegraphics[width=35mm]{figures/sd_scp/pic_ps3.png}
 		\end{center}}
 	\end{SCn}
 \end{frame}
@@ -134,7 +134,7 @@
 		\scntext{пояснение}{Каждая \textit{пятиэлементная sc-конструкция} состоит из пяти \newline \textit{sc-элементов}. Второй и четвертый элементы обязательно являются \textit{sc-коннекторами}, остальные элементы могут быть произвольного типа.}
 		\scnrelfrom{пример}{
 			\begin{center}
-				\includegraphics[width=35mm]{figures/sd_sets/pic_ps4.png}
+				\includegraphics[width=35mm]{figures/sd_scp/pic_ps4.png}
 		\end{center}}
 	\end{SCn}
 \end{frame}
@@ -156,7 +156,7 @@
 \begin{frame}%пример программы
 	\scntext{описание примера}{
 	\begin{center}
-	\includegraphics[width=50mm]{figures/sd_sets/program_example.png}
+	\includegraphics[width=50mm]{figures/sd_scp/program_example.png}
 	\end{center}}
 \end{frame}
 
@@ -177,7 +177,7 @@
 \begin{frame}%пример процесса
 		\scntext{пример выполнения}{
 			\begin{center}
-			\includegraphics[width=40mm]{figures/sd_sets/process_example.png}
+			\includegraphics[width=40mm]{figures/sd_scp/process_example.png}
 		\end{center}}
 \end{frame}
 
@@ -239,6 +239,41 @@
 	\vspace{-2 em}
 \end{frame}
 
+\begin{frame}{\\scp-оператор генерации конструкций}%scp-оператор
+	\topline
+	\justifying
+	\begin{SCn}
+		
+		\scnheader{scp-оператор генерации конструкций}
+		\begin{scnrelfromset}{разбиение}
+			\scnitem{scp-оператор генерации конструкции по произвольному образцу}
+			\scnitem{scp-оператор генерации пятиэлементной конструкции}
+			\scnitem{scp-оператор генерации трехэлементной конструкции}
+			\scnitem{scp-оператор генерации одноэлементной конструкции}
+		\end{scnrelfromset}
+	
+	\end{SCn}
+	\vspace{-2 em}
+\end{frame}
+
+\begin{frame}{scp-оператор ассоциативного поиска конструкций}%scp-оператор
+	\topline
+	\justifying
+	\begin{SCn}
+		
+	\scnheader{scp-оператор ассоциативного поиска конструкций}
+	\begin{scnrelfromset}{разбиение}
+		\scnitem{scp-оператор поиска конструкции по произвольному образцу}
+		\scnitem{scp-оператор поиска пятиэлементной конструкции с формированием множеств}
+		\scnitem{scp-оператор поиска трехэлементной конструкции с формированием множеств}
+		\scnitem{scp-оператор поиска пятиэлементной конструкции}
+		\scnitem{scp-оператор поиска трехэлементной конструкции}
+	\end{scnrelfromset}
+	
+	\end{SCn}
+	\vspace{-2 em}
+\end{frame}
+
 \begin{frame}{\\Атомарный тип scp-оператора}%атомарный тип
 	\topline
 	\justifying
@@ -251,6 +286,10 @@
 \begin{frame}{\\Декомпозиция scp-процесса}%scp-оператор
 	\topline
 	\justifying
+	
+	\begin{center}
+		\includegraphics[width=100mm]{figures/sd_scp/process_decomp.png}
+	\end{center}
 	
 	\vspace{-2em}
 \end{frame}
@@ -321,10 +360,28 @@
 	\end{SCn}
 \end{frame}
 
-\begin{frame}{\\Пример описания scp-переменных}%sc-константа
+\begin{frame}{\\Пример использования scp-переменных}%sc-константа
 	\topline
 	\justifying
+	
+	\begin{center}
+		\includegraphics[scale=0.7]{figures/sd_scp/scp_var.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Следует отличать}%sc-константа
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{sc-переменная}
+		\scntext{пояснение}{Обозначает произвольный sc-элемент из некоторого оговоренного множества (множества значений). Используется в логических формулах и обобщенных структурах}
 		
+		\scnheader{scp-переменная}
+		\scntext{пояснение}{Представляет собой ситуативное множество, которое в каждый момент времени либо не содержит элементов (у scp-переменной нет значения), либо содержит ровно один элемент (значение scp-переменной). Значением scp-переменной может быть как sc-переменная, так и sc-константа.}
+	\end{SCn}
+	
 \end{frame}
 
 \begin{frame}{\\sc-операнд с заданным значением}
@@ -342,7 +399,7 @@
 		
 \end{frame}
 
-\begin{frame}{\\sc-операнд со свободным значением}
+\begin{frame}{\\scp-операнд со свободным значением}
 	\topline
 	\justifying
 	\small
@@ -418,21 +475,47 @@
 	\vspace{-3em}
 \end{frame}
 
-\begin{frame}{Пример описания scp-оператора \\генерации одноэлементной конструкции (genEl)}
+\begin{frame}{\\Пример описания scp-оператора поиска}
 	\topline
 	\justifying
 	
-\end{frame}
-
-\begin{frame}{Пример описания scp-оператора \\генерации трёхэлементной конструкции (genElStr3)}
-	\topline
-	\justifying
+	\begin{center}
+		\includegraphics[scale=0.7]{figures/sd_scp/searchElStr3_faf.png}
+	\end{center}
 	
 \end{frame}
 
-\begin{frame}{Пример выполнения scp-оператора \\поиска трёхэлементной конструкции (searchElStr3)}
+\begin{frame}{\\Пример описания scp-оператора поиска}
 	\topline
 	\justifying
+	
+	\begin{center}
+		\includegraphics[scale=0.6]{figures/sd_scp/searchElStr3_faf_2.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Пример описания scp-оператора генерации}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.5]{figures/sd_scp/genElStr5_fafaa.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Пример описания scp-оператора генерации}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.5]{figures/sd_scp/genElStr5_fafaa_2.png}
+	\end{center}
 	
 \end{frame}
 
@@ -445,6 +528,30 @@
 		\item \textbf{\textit{then*}}
 		\item \textbf{\textit{else*}}
 	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Переходы между scp-операторами}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{center}
+	\includegraphics[scale=0.7]{figures/sd_scp/operators_order1.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Переходы между scp-операторами}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.7]{figures/sd_scp/operators_order2.png}
+	\end{center}
 	
 \end{frame}
 
