@@ -555,79 +555,333 @@
 	
 \end{frame}
 
-\begin{frame}{\\Параллельное выполнение scp-операторов}
-	\topline
-	\justifying
-	
-\end{frame}
-
-\iffalse
-
-\begin{frame}{\\Принципы интерпретации scp-программ}
-	\topline
-	\justifying
-	
-\end{frame}
-
 \begin{frame}{\\Аргументы scp-процесса и scp-программы}
 	\topline
 	\justifying
 	
-\end{frame}
-
-\begin{frame}{\\Организация циклов}
-	\topline
-	\justifying
+	\begin{SCn}
+		\scnheader{параметр scp-программы\scnrolesign}
+		\scnsubset{аргумент действия\scnrolesign}
+		\begin{scnrelfromset}{разбиение}
+			\scnitem{in-параметр\scnrolesign}
+			\scnitem{out-параметр\scnrolesign}
+		\end{scnrelfromset}
+	\end{SCn}
+	
+	Ролевое отношение \textbf{\textit{параметр scp-программы\scnrolesign}} связывает знак соответствующего \textit{scp-программе} \textit{\mbox{scp-процесса}} с его аргументами.
 	
 \end{frame}
 
-\begin{frame}{\\Копирование множества}
+
+\begin{frame}{\\\textit{in-параметр\scnrolesign}}
 	\topline
 	\justifying
+	
+	Параметры типа \textbf{\textit{in-параметр\scnrolesign}} хоть и соответствуют \textit{переменным scp-программы\scnrolesign}, не могут менять значение в процессе ее интерпретации. Фиксированное значение переменной устанавливается при создании уникальной копии \textit{scp-программы} (\textit{scp-процесса}) для ее интерпретации, и, таким образом, соответствующая \textit{scp-переменная\scnrolesign} на момент начала ее интерпретации становится \textit{scp-константой\scnrolesign} в рамках каждого \textit{scp-оператора}, в котором встречалась данная \textit{scp-переменная\scnrolesign}. Использование \textit{in-параметров} можно рассматривать по аналогии с использованием варианта механизма передачи по значению в традиционных языках программирования, с тем условием, что значение локальной переменной в рамках дочерней программы не может быть изменено.
+	
+\end{frame}
+
+\begin{frame}{\\\textit{out-параметр\scnrolesign}}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	Параметры типа \textbf{\textit{out-параметр\scnrolesign}} соответствуют \textit{переменным scp-программы\scnrolesign} и обладают всеми теми же соответствующими свойствами. Чаще всего предполагается, что значение данного параметра необходимо родительской \textit{scp-программе}, содержащей оператор вызова текущей \textit{scp-программы}. При этом на момент начала интерпретации в качестве параметра дочернему процессу передается непосредственно узел, обозначающий переменную (а точнее, ее уникальную копию в рамках процесса) родительского процесса. Указанная переменная может при необходимости иметь значение, либо не иметь. После завершения и во время интерпретации дочернего процесса родительский процесс по-прежнему может работать с переменной, переданной в качестве \textit{out-параметра\scnrolesign}, при необходимости просматривая или изменяя ее значение. Использование out-параметра можно рассматривать по аналогии с использованием механизма передачи по ссылке в традиционных \textit{языках программирования}.
+	
+\end{frame}
+
+\begin{frame}{\\Действие интерпретации scp-программы}
+	\topline
+	\justifying
+	
+	\begin{center}
+		\includegraphics[scale=0.7]{figures/sd_scp/interpreting_action.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Принципы интерпретации scp-программы}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{textitemize}
+		\item На основе scp-программы как на основе шаблона генерируется конкретный scp-процесс
+		\begin{textitemize}
+			\item Вместо sc-переменных, соответствующих \textit{in-параметрам\scnrolesign}, подставляются конкретные аргументы \textit{действия интерпретации scp-программы}
+			\item Вместо sc-переменных, соответствующих \textit{out-параметрам\scnrolesign}, подставляются scp-операнды, являющиеся аргументами \textit{действия интерпретации scp-программы}
+			\item Соответствующие \textit{in-параметрам\scnrolesign} scp-операндам роль меняется с \textit{scp-переменная\scnrolesign} на \textit{scp-константа\scnrolesign}
+		\end{textitemize}
+		\item ...
+	\end{textitemize}
+		
+\end{frame}
+
+\begin{frame}{\\Принципы интерпретации scp-программы}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{textitemize}
+		\item ...
+		\item Находится начальный scp-оператор полученного scp-процесса и инициируется (добавляется во множество \textit{активный scp-оператор})
+		\item После выполнения scp-оператора находятся и инициируются следующие scp-операторы (в зависимости от успешности его выполнения) 
+		\item Так продолжается до тех пор, пока не будет встречен scp-оператор завершения выполнения scp-программы (return)
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Организация циклов\\Проблемы}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Множества в SC-коде по умолчанию являются неупорядоченными.
+		\item Механизм итерирования по элементам множества изначально не предусматривается в sc-памяти, поскольку требует введения дополнительных служебных конструкций. Это обусловлено нелинейностью sc-памяти.
+		\item \textit{scp-оператор ассоциативного поиска конструкций} находит \underline{одну} произвольную конструкцию, удовлетворяющую заданному шаблону.
+		\item Для того, чтобы найти другую ("следующую") конструкцию, удовлетворяющую тому же шаблону, нужно разрушить предыдущую, чтобы она не находилась, однако это приведет к нарушению обрабатываемой sc-конструкции.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Организация циклов\\Предлагаемый подход}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Найти все sc-конструкции, удовлетворяющие заданному шаблону и занести нужные их компоненты во временное множество
+		\item Брать по одному элементу из этого временного множества, обрабатывать и затем удалять обработанный элемент из этого множества
+		\item В конце удалить само временное множество
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{формируемое множество\scnrolesign}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		
+		\scnheader{scp-операнд\scnrolesign}
+		\scnsuperset{формируемое множество\scnrolesign}
+		
+			\begin{scnindent}
+				\begin{scnrelfromset}{разбиение}
+					\scnitem{формируемое множество 1\scnrolesign}
+					\scnitem{формируемое множество 2\scnrolesign}
+					\scnitem{формируемое множество 3\scnrolesign}
+					\scnitem{формируемое множество 4\scnrolesign}
+					\scnitem{формируемое множество 5\scnrolesign}
+				\end{scnrelfromset}
+			\end{scnindent}
+			
+	\end{SCn}
+\end{frame}
+
+
+\begin{frame}{scp-оператор поиска трехэлементной конструкции с формированием множеств}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.55]{figures/sd_scp/searchSetStr3.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{scp-оператор поиска трехэлементной конструкции с формированием множеств}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.55]{figures/sd_scp/searchSetStr3_2.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{scp-оператор поиска трехэлементной конструкции с формированием множеств}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.55]{figures/sd_scp/searchSetStr3_3.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{scp-оператор поиска трехэлементной конструкции с формированием множеств}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.55]{figures/sd_scp/searchSetStr3_4.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{scp-оператор поиска трехэлементной конструкции с формированием множеств}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.55]{figures/sd_scp/searchSetStr3_5.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{scp-оператор поиска трехэлементной конструкции с формированием множеств}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.55]{figures/sd_scp/searchSetStr3_6.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{scp-оператор поиска трехэлементной конструкции с формированием множеств}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.55]{figures/sd_scp/searchSetStr3_7.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{scp-оператор поиска трехэлементной конструкции с формированием множеств}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.55]{figures/sd_scp/searchSetStr3_8.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Пример выполнения цикла}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{figures/sd_scp/cycle1.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Пример выполнения цикла}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{figures/sd_scp/cycle2.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Пример выполнения цикла}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{figures/sd_scp/cycle3.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Пример выполнения цикла}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{figures/sd_scp/cycle4.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Структура цикла}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.7]{figures/sd_scp/cycle_operators.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Структура цикла}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.7]{figures/sd_scp/cycle_operators.png}
+	\end{center}
 	
 \end{frame}
 
 \begin{frame}{\\Вызов подпрограмм}
 	\topline
 	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.55]{figures/sd_scp/call.png}
+	\end{center}
 	
 \end{frame}
 
-\begin{frame}%разбиение2
-	\begin{SCn}
-	\small
-		
-	\scnheader{scp-операнд\scnrolesign}
-	\begin{scnrelfromset}{включение}
-	\scnitem{формируемое множество\scnrolesign}
-	\begin{scnindent}
-		\begin{scnrelfromset}{разбиение}
-			\scnitem{формируемое множество 1\scnrolesign}
-			\scnitem{формируемое множество 2\scnrolesign}
-			\scnitem{формируемое множество 3\scnrolesign}
-			\scnitem{формируемое множество 4\scnrolesign}
-			\scnitem{формируемое множество 5\scnrolesign}
-		\end{scnrelfromset}
-	\end{scnindent}
-
-	\scnitem{удаляемый sc-элемент\scnrolesign}	
-	\scnitem{тип sc-элемента\scnrolesign}
-	\begin{scnindent}
-	\begin{scnrelfromset}{разбиение}
-		\scnitem{sc-узел\scnrolesign}
-		
-		
-		\scnitem{sc-дуга\scnrolesign}
-		\scnitem{sc-ребро\scnrolesign}
-		\scnitem{файл\scnrolesign}
-	\end{scnrelfromset}
+\begin{frame}{\\Вызов подпрограмм}
+	\topline
+	\justifying
+	\vspace{10mm}
 	
-	\end{scnindent}
-	\end{scnrelfromset}
-\end{SCn}
+	
+	\begin{center}
+		\includegraphics[scale=0.55]{figures/sd_scp/call2.png}
+	\end{center}
+	
 \end{frame}
 
-\begin{frame}{\\агентная scp-программа}%агентная scp-программа
+\begin{frame}{\\Вызов подпрограмм}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.55]{figures/sd_scp/call3.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Ожидание завершения подпрограммы}
+	\topline
+	\justifying
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[scale=0.5]{figures/sd_scp/waitReturn.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\агентная scp-программа}
 	\topline
 	\justifying
 	\scnheader{агентная scp-программа}
@@ -636,5 +890,4 @@
 		
 		Значением второго параметра является \textit{sc-элемент}, с которым непосредственно связано событие, в результате возникновения которого был инициирован соответствующий \textit{sc-агент}, т.е., например, сгенерированная либо удаляемая \textit{sc-дуга} или \textit{sc-ребро}.}
 	\vspace{-2em}
-	\end{frame}
-\fi
+\end{frame}
