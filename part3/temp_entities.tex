@@ -107,13 +107,13 @@
 	
 	\vspace{10mm}
 	Процесс задается возникновением или исчезновением связей, связывающих заданную временную сущность с другими сущностями.\\
-	Процессу можно поставить в соответствие его \textbf{начальную ситуацию*} и \textbf{конечную ситуацию*}, то есть указать ситуации, переход между которыми осуществляется в ходе процесса.
+	Процессу можно поставить в соответствие его \textbf{\textit{начальную ситуацию*}} и \textbf{\textit{конечную ситуацию*}}, то есть указать ситуации, переход между которыми осуществляется в ходе процесса.
 	\scnheader{процесс}
 	\scnidtf{динамическая структура}
 	\scnidtf{процесс преобразования некоторой временной сущности из одного состояния в другое}
 	\begin{scnrelfromset}{разбиение}
 		\scnitem{точечный (мгновенный) процесс}
-		\scnitem{элементраный (атомарный) процесс}
+		\scnitem{элементарный (атомарный) процесс}
 	\end{scnrelfromset}
 \end{frame}
 
@@ -129,9 +129,53 @@
 \begin{frame}{\\Событие}
 	\topline
 	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.8]{./figures/sd_temp_entities/event.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\\textbf{\textit{событие*}}}
+	\topline
+	\justifying
 	\scnheader{событие*}
 	\scniselement{бинарное отношение}
-	\scnrelfrom{пояснение}{Связки отношения событие* связывают знак процесса и ориентированную пару, первым компонентом которой	является знак начальной ситуации* данного процесса, вторым компонентом – знак конечной ситуации* данного процесса}
+	\scntext{пояснение}{Связки отношения \textit{событие*} связывают знак процесса и ориентированную пару, первым компонентом которой	является знак \textit{начальной ситуации*} данного процесса, вторым компонентом -- знак \textit{конечной ситуации*} данного процесса}
+\end{frame}
+
+\begin{frame}{\\\textbf{\textit{событие*}}}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.7]{./figures/sd_temp_entities/nrel_event.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Пример ситуации}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.7]{./figures/sd_temp_entities/valve_opening.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Пример процесса}
+\topline
+\justifying
+\vspace{10mm}
+\begin{SCn}
+	\begin{figure}[H]
+		\includegraphics[scale=0.7]{./figures/sd_temp_entities/process_description.png}
+	\end{figure}
+\end{SCn}
 \end{frame}
 
 \begin{frame}{Темпоральные отношения}
@@ -152,11 +196,45 @@
 	\end{scnindent}
 \end{frame}
 
+\begin{frame}{\\Темпоральная декомпозиция}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{./figures/sd_temp_entities/img_temporal_decomposition.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Темпоральное объединение}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{./figures/sd_temp_entities/img_temporal_union.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Темпоральное объединение}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{./figures/sd_temp_entities/temporal_union.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
 \begin{frame}{Темпоральное включение}
 	\topline
 	\justifying
+	\vspace{10mm}
 	\scnheader{темпоральное включение*}
-	\scnrelfrom{пояснение}{Связки отношения темпоральное включение* связывают две временные сущности, период существования одной из которых полностью включается в период существования второй. Первым компонентом каждой связки отношения темпоральное включение* является знак временной сущности, длительность существования которой больше.}
+	\scntext{пояснение}{Связки отношения \textit{темпоральное включение*} связывают две временные сущности, период существования одной из которых полностью включается в период существования второй. Первым компонентом каждой связки отношения \textit{темпоральное включение*} является знак временной сущности, длительность существования которой больше.}
 	\scnsuperset{темпоральная часть*}
 	\scnsuperset{темпоральное включение без совпадения начальных и конечных моментов*}
 	\scnsuperset{темпоральное совпадение*}
@@ -164,7 +242,7 @@
 	\scnsuperset{темпоральное включение с совпадением конечных моментов*}
 \end{frame}
 
-\begin{frame}{\\Темпоральная частьи включение, совпадение}
+\begin{frame}{\\Темпоральная часть и включение, совпадение}
 	\topline
 	\justifying
 	Связки отношения \textbf{темпоральная часть*} связывают две временные сущности, одна из которых является частью	другой, например, действие и одно из его поддействий. Соответственно, период существования одной из этих сущностей всегда будет включаться в период существования другой (большей).\\
@@ -173,13 +251,133 @@
 	\scnidtf{совпадение начала и завершения*}
 \end{frame}
 
+\begin{frame}{\\Темпоральная часть}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{./figures/sd_temp_entities/img_temporal_part.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Темпоральное включение (строгое)}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{./figures/sd_temp_entities/img_strict_temporal_inclusion.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Темпоральное включение (совпадение начал)}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{./figures/sd_temp_entities/img_temporal_include_with_match_start_points.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Темпоральное включение (совпадение завершений)}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{./figures/sd_temp_entities/img_temporal_include_with_terminal_point_match.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
 \begin{frame}{\\Темпоральная смежность}
 	\topline
 	\justifying
 	\scnheader{темпоральная смежность*}
 	\scnidtf{темпоральная последовательность без промежутка*}
 	\scnidtf{сразу после*}
-	\scnheader{темпоральная смежность с промежутком*}
-	\scnidtf{сразу после*}
+	\scnheader{темпоральная последовательность с пересечением*}
+	\scnheader{темпоральная последовательность с промежутком*}
+	\scnidtf{не сразу после*}
+\end{frame}
 
+\begin{frame}{\\Темпоральная смежность}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{./figures/sd_temp_entities/img_temporal_adjacency.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Темпоральная последовательность с пересечением}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{./figures/sd_temp_entities/img_temporal_cross_sequence.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Темпоральная последовательность с промежутком}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{./figures/sd_temp_entities/img_temporal_sequence_with_intermediate.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Темпоральные параметры}
+	\topline
+	\justifying
+	\scnheader{параметр}
+	\scnhaselement{длительность}
+	\scnhaselement{начало}
+	\scnhaselement{завершение}
+	\scnhaselement{одновременность}
+\end{frame}
+
+\begin{frame}{\\Длительность}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.65]{./figures/sd_temp_entities/duration.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Завершение}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{./figures/sd_temp_entities/completion.png}
+		\end{figure}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Одновременность}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{SCn}
+		\begin{figure}[H]
+			\includegraphics[scale=0.65]{./figures/sd_temp_entities/simultaneity.png}
+		\end{figure}
+	\end{SCn}
 \end{frame}
