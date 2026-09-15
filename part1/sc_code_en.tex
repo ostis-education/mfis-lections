@@ -28,9 +28,9 @@
 \begin{textitemize}
 \item computer memory is homogeneous (linear)
 \item access to computer memory cells is carried out at the address
-\item The alphabet used to represent data and commands is the set \{0, 1\}
+\item alphabet used to represent data and commands is the set \{0, 1\}
 \item each program consists of a set of instructions executed by the processor sequentially
-\item It is possible that conditional jump commands may be present in programs
+\item conditional jump commands may be present in programs
 \end{textitemize}
 \end{frame}
 
@@ -50,14 +50,14 @@
 	\textbf{Advantages:}
 	\begin{textitemize}		
 		\item is easy to implement
-		\item convenient for the car
+		\item convenient for the computer
 	\end{textitemize}		
 	
 	\bigskip
 	\textbf{Disadvantages:}
 	
 	\begin{textitemize}		
-		\item is inconvenient for a person
+		\item is inconvenient for a human
 		\item cannot be interpreted without context
 	\end{textitemize}	
 	
@@ -74,7 +74,7 @@ Develop a method of encoding information that
 \begin{textitemize}
 \item is convenient for presentation and processing on a computer
 \item is easy for human perception
-\item has <<meaningfulness>>, can be interpreted unambiguously		
+\item has "meaningfulness"{}, can be interpreted unambiguously		
 \end{textitemize}
 
 \bigskip
@@ -114,7 +114,7 @@ One of the key distinguishing features of knowledge is interpretability (D. A. P
 	\item the basic alphabet consists of 5 elements
 	\item human-friendly
 	\item computer-friendly
-	\item has "meaningfulness"
+	\item has "meaningfulness"{}
 \end{textitemize}
 \end{textitemize}
 \end{frame}
@@ -125,7 +125,7 @@ One of the key distinguishing features of knowledge is interpretability (D. A. P
 \vspace{10mm}
 \begin{SCn}
 \scnheader{SC-code}
-\scnidtf{an abstract language that resides in the memory of a computer system}
+\scnidtf{an abstract language that is stored in the memory of a computer system}
 \scntext{note}{SC-code can be used to describe knowledge bases, problem solvers, and the interface of an intelligent system. SC-code is an abstract language, but it can be visualized in various forms.}
 \vspace{5mm}
 \textbf{Forms of external representation of SC-code}
@@ -140,6 +140,7 @@ One of the key distinguishing features of knowledge is interpretability (D. A. P
 \begin{frame}{\\Forms of SC-code representation}
 \topline
 \justifying
+\vspace{5mm}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.4\textwidth}
 	\begin{SCn}
@@ -157,15 +158,13 @@ One of the key distinguishing features of knowledge is interpretability (D. A. P
 \begin{column}{0.5\textwidth}
 	\vspace{10mm}
 	\begin{figure}[H]
-		\includegraphics[scale=0.3]{./figures/sd_sc_code/ostis-basics-1.png}
+		\includegraphics[scale=0.37]{./figures/sd_sc_code/ostis-basics-1.png}
 	\end{figure}
 \end{column}
 \end{columns}
 \end{frame}
 
-\iffalse
-
-\begin{frame}{\\Basic Provisions of the SC-code}
+\begin{frame}{\\Basic Principles of SC-code}
 \topline
 \justifying
 \vspace{8mm}
@@ -174,10 +173,10 @@ One of the key distinguishing features of knowledge is interpretability (D. A. P
 \scntext{explanation}{The information is contained not in the signs themselves, but in the configuration of connections between them}
 \scniselement{abstract language}
 \scniselement{graph language}
-\begin{scnrelfromset}{basic provisions}
+\begin{scnrelfromset}{basic principles}
 	\scnfileitem{entity signs are syntactically elementary fragments of sc-texts; such signs have no internal structure}
 	\scnfileitem{information constructs that are not sc-texts (SC-code texts) can be included in the knowledge base as files}
-	\scnfileitem{SC-code texts have a nonlinear structure, since each entity symbol is included in the knowledge base only once and has an unlimited number of connections with other entity symbols}
+	\scnfileitem{SC-code texts have a nonlinear structure, since each entity sign is included in the knowledge base only once and has an unlimited number of connections with other entity signs}
 \end{scnrelfromset}
 \end{SCn}
 \end{frame}
@@ -187,7 +186,7 @@ One of the key distinguishing features of knowledge is interpretability (D. A. P
 \justifying
 \begin{SCn}
 \scnheader{SC-code}
-\begin{scnrelfromset}{basic provisions}
+\begin{scnrelfromset}{basic principles}
 	\scnfileitem{a knowledge base is a graph structure whose element alphabet includes a set of nodes, edges, arcs, base arcs, and a set of special nodes (files)}
 	\scnfileitem{The structural feature of the graph structure of a knowledge base is that its arcs and edges can connect not only node to node, but also node to edge or arc, etc.}
 	\scnfileitem{the absence of synonymy is achieved by gluing together identical sc-elements}
@@ -196,7 +195,7 @@ One of the key distinguishing features of knowledge is interpretability (D. A. P
 \end{SCn}
 \end{frame}
 
-\begin{frame}{\\Cyntax. SC-code alphabet}
+\begin{frame}{\\Syntax. SC-code alphabet}
 \topline
 \justifying
 \begin{SCn}
@@ -215,8 +214,7 @@ One of the key distinguishing features of knowledge is interpretability (D. A. P
 Thus, any class of sc-elements can be identified explicitly by:\\
 \begin{textitemize}
 	\item{introduction of an sc-element, which is a sign of this class of sc-elements (sc-class);}
-	\item{carrying out constant positive sc-pairs of membership into all sc-elements that are elements
-		allocated sc-class and stored (present) in the current state of sc-memory.}
+	\item{setting of constant positive sc-pairs of membership into all sc-elements that are elements of mentioned sc-class and stored (present) in the current state of sc-memory.}
 \end{textitemize}
 
 \scnheader{minimum SC-code alphabet}
@@ -224,17 +222,17 @@ Thus, any class of sc-elements can be identified explicitly by:\\
 \end{SCn}
 \end{frame}
 
-\begin{frame}{\\SC Core Code Alphabet}
+\begin{frame}{\\SC-code Core Alphabet}
 \topline
 \justifying
 \begin{SCn}
 \begin{columns}[T,onlytextwidth]
 	\begin{column}{0.7\textwidth}
 		\vspace{5mm}
-		\scnheader{SC Core Code Alphabet}
+		\scnheader{SC-code Core Alphabet}
 		\begin{scneqtoset}
 			\scnitem{sc-node, which is a file sign}
-			\scnitem{sc-node that is not a file mark}
+			\scnitem{sc-node, which is not a file sign}
 			\scnitem{basic sc-arc}
 			\scnitem{sc-edge}
 			\scnitem{sc-arc of general type}
@@ -249,7 +247,7 @@ Thus, any class of sc-elements can be identified explicitly by:\\
 \end{SCn}
 \end{frame}
 
-\begin{frame}{\\SC Core Code Alphabet}
+\begin{frame}{\\SC-code Core Alphabet}
 \topline
 \justifying
 \begin{SCn}
@@ -257,19 +255,19 @@ Thus, any class of sc-elements can be identified explicitly by:\\
 
 \scriptsize
 
-scnheader{sc-edge}
+\scnheader{sc-edge}
 \scnidtf{Class of \textit{sc-elements} that have, within the \textit{Core of SC-code}, the syntactic label \textit{designations of undirected sc-pairs}}
 
-scnheader{sc-arc of general type}
+\scnheader{sc-arc of general type}
 \scnidtf{Class of \textit{sc-elements} that have, within the \textit{Core of SC-code}, the syntactic label \textit{designations of oriented sc-pairs that are not constant positive sc-pairs of membership}}
 
-scnheader{basic sc-arc}
+\scnheader{basic sc-arc}
 \scnidtf{Class of \textit{sc-elements} that have, within the framework of the \textit{Core SC-code}, the syntactic label \textit{constant positive sc-membership pairs}}
 
 \scnheader{sc-node, which is the file sign}
 \scnidtf{\textit{sc-elements}, which has within the \textit{SC-code core} the syntactic label \textit{sc-elements}, which are signs of \textit{files}}
 
-\scnheader{sc-node not a file sign}
+\scnheader{sc-node, which is not a file sign}
 \scnidtf{\textit{sc-node}, which has within the \textit{SC-code core} the syntactic label \textit{sc-elements that are neither file signs nor designations of sc-pairs}}
 \end{SCn}
 \end{frame}
@@ -295,14 +293,14 @@ The basic classification features of \textit{sc-elements} include:
 \justifying
 \vspace{10mm}
 \begin{SCn}
-scnheader{sc-element}
-\scnrelfrom{partition}{Structural feature of classification of sc-elements}
+\scnheader{sc-element}
+\scnrelfrom{subdividing}{Structural feature of classification of sc-elements}
 \begin{scnindent}
 	\begin{scneqtoset}
-		\scnitem{sc-set notation}
-		\scnitem{designation of an external entity}
+		\scnitem{sc-set designation}
+		\scnitem{external entity designation}
 		\begin{scnindent}
-			\begin{scnrelfromset}{partition}
+			\begin{scnrelfromset}{subdividing}
 				\scnitem{file designation}
 				\scnitem{designation of an information construct that is neither an sc-set nor a file}
 				\scnitem{designation of an external entity that is not an information construct}
@@ -319,24 +317,24 @@ scnheader{sc-element}
 \vspace{3mm}
 \footnotesize
 \begin{SCn}
-scnheader{sc-set notation}
-\begin{scnrelfromset}{partition}
-	scnitem {sc-ligament notation}
+\scnheader{sc-set notation}
+\begin{scnrelfromset}{subdividing}
+	\scnitem{sc-connection notation}
 	\begin{scnindent}
-		\begin{scnrelfromset}{partition}
+		\begin{scnrelfromset}{subdividing}
 			\scnitem{sc-singleton designation}
-			scnitem {sc-pair notation}
+			\scnitem{sc-pair notation}
 			\begin{scnindent}
-				\begin{scnrelfromset}{partition}
-					\scnitem{notation for an unoriented sc-pair}
-					\scnitem{designation of an oriented sc-pair}
+				\begin{scnrelfromset}{subdividing}
+					\scnitem{unoriented sc-pair designation}
+					\scnitem{oriented sc-pair designation}
 				\end{scnrelfromset}
 			\end{scnindent}
-			\scnitem{a notation for an sc-connection that is neither a singleton nor a pair}
+			\scnitem{designation of an sc-connection that is neither a singleton nor a pair}
 		\end{scnrelfromset}
 	\end{scnindent}
-	scnitem{sc-class designation}
-	scnitem {sc-structure notation}
+	\scnitem{sc-class designation}
+	\scnitem{sc-structure designation}
 \end{scnrelfromset}
 \end{SCn}
 \end{frame}
@@ -345,14 +343,14 @@ scnheader{sc-set notation}
 \topline
 \justifying
 \begin{SCn}
-\scnheader{designation of an oriented sc-pair}
-\begin{scnrelfromset}{partition}
-	\scnitem{designation of the sc-pair of belonging}
+\scnheader{oriented sc-pair designation}
+\begin{scnrelfromset}{subdividing}
+	\scnitem{designation of the sc-pair of membership}
 	\begin{scnindent}
-		\begin{scnrelfromset}{partition}
-			\scnitem{designation of a fuzzy membership sc-pair}
-			\scnitem{designation of a sc-pair of positive membership}
-			\scnitem{designation of a sc-pair of negative affiliation}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{designation of an sc-pair of fuzzy membership }
+			\scnitem{designation of an sc-pair of positive membership}
+			\scnitem{designation of an sc-pair of negative membership}
 		\end{scnrelfromset}
 	\end{scnindent}
 	\scnitem{denotation of an oriented sc-pair that is not a membership pair}
@@ -365,9 +363,9 @@ scnheader{sc-set notation}
 \justifying
 \begin{SCn}
 \scnheader{Logical-semantic classification of sc-elements}
-scnstartstruct
-scnheader{sc-element}
-\begin{scnrelfromset}{partition}
+\scnstartstruct
+\scnheader{sc-element}
+\begin{scnrelfromset}{subdividing}
 	\scnitem{sc-constant}
 	\begin{scnindent}
 		\scnidtf{sc-element, the logical-semantic meaning of which is itself}
@@ -383,33 +381,33 @@ scnheader{sc-element}
 \justifying
 \begin{SCn}
 \scnheader{Classification of sc-elements by the temporal characteristics of the entities they denote}
-scnstartstruct
-scnheader{sc-element}
-\scnrelfrom{partition}{A sign of the constant existence of entities designated by sc-elements}
+\scnstartstruct
+\scnheader{sc-element}
+\scnrelfrom{subdividing}{A sign of the constant existence of entities designated by sc-elements}
 \begin{scnindent}
 	\begin{scneqtoset}
-		\scnitem{designation of a constant entity}
+		\scnitem{permanent entity designation}
 		\begin{scnindent}
 			\scnidtf{designation of a permanently existing entity}
 		\end{scnindent}
-		\scnitem{designation of a temporary entity}
+		\scnitem{temporary entity designation}
 	\end{scneqtoset}
 \end{scnindent}
 \scnendstruct
 \end{SCn}
 \end{frame}
 
-\begin{frame}{\\Static entity flag}%Possibly redundant
+\begin{frame}{\\Static entity indicator}%Possibly redundant
 \topline
 \justifying
 \begin{SCn}
-scnheader{sc-element}
-\scnrelfrom{partition}{Staticity indicator for entities denoted by sc-elements}
+\scnheader{sc-element}
+\scnrelfrom{subdividing}{Staticity indicator for entities denoted by sc-elements}
 \begin{scnindent}
 	\begin{scneqtoset}
 		\scnitem{static entity designation}
 		\begin{scnindent}
-			\scnidtf{designation of an entity, changes to which within the relevant period of time are considered immaterial}
+			\scnidtf{designation of an entity, changes to which within the relevant period of time are considered insignificant}
 			\scnsuperset{notation for a static sc-set}
 		\end{scnindent}
 		\scnitem{dynamic entity designation}
@@ -427,11 +425,11 @@ scnheader{sc-element}
 \justifying
 \begin{SCn}
 \scnheader{temporary entity designation}
-\begin{scnrelfromset}{partition}
+\begin{scnrelfromset}{subdividing}
 	\scnitem{designation of an external temporal entity}
 	\begin{scnindent}
-		\scnsuperset{designation of the external situation}
-		\scnsuperset{external event designator}
+		\scnsuperset{external situation designation}
+		\scnsuperset{external event designation}
 		\scnsuperset{external process designation}
 	\end{scnindent}
 	\scnitem{designation of an internal temporary entity in sc-memory}
@@ -444,7 +442,7 @@ scnheader{sc-element}
 \justifying
 \begin{SCn}
 \scnheader{designation of an internal temporary entity in sc-memory}
-\begin{scnrelfromset}{partition}
+\begin{scnrelfromset}{subdividing}
 	\scnitem{designation of a situation in sc-memory}
 	\begin{scnindent}
 		\scnidtf{designation of a situation that has arisen or is arising during the processing of information in sc-memory}
@@ -466,7 +464,7 @@ scnheader{sc-element}
 \justifying
 \vspace{10mm}
 \begin{SCn}
-\textbf{When talking about the temporal properties of sc-elements, one should clearly distinguish:}
+\textbf{When talking about the temporal properties of sc-elements, we should clearly distinguish:}
 \begin{textitemize}
 	\item temporary nature of the presence of any sc-element in the knowledge base in which it is located
 	\item temporary nature of the presence in sc-memory of the entire given sc-construction (situation in sc-memory);
@@ -491,9 +489,9 @@ This classification is completely analogous to the \textit{Structural classifica
 \justifying
 \begin{SCn}
 \scnheader{Structural classification of sc constants}
-scnstartstruct
+\scnstartstruct
 \scnheader{sc-constant}
-\begin{scnrelfromset}{partition}
+\begin{scnrelfromset}{subdividing}
 	\scnitem{sc-set}
 	\scnitem{external entity}
 \end{scnrelfromset}
@@ -510,7 +508,7 @@ scnstartstruct
 \scnidtf{sc-element, which is a sign of an external entity}
 \scnidtf{external entity sign}
 \scnidtf{sign of an entity that is not an sc-set (sc-construction)}
-\begin{scnrelfromset}{partition}
+\begin{scnrelfromset}{subdividing}
 	\scnitem{file}
 	\scnitem{internal file}
 	\scnitem{external entity that is not an internal file}
@@ -526,10 +524,10 @@ scnstartstruct
 \begin{SCn}
 \scnheader{sc-set}
 \begin{scnindent}
-	\begin{scnrelfromset}{partition}
+	\begin{scnrelfromset}{subdividing}
 		\scnitem{sc-link}
 		\begin{scnindent}
-			\begin{scnrelfromset}{partition}
+			\begin{scnrelfromset}{subdividing}
 				\scnitem{sc-singleton}
 				\scnitem{sc-pair}
 				\scnitem{sc-connection that is neither a singleton nor a pair}
@@ -547,18 +545,18 @@ scnstartstruct
 \justifying
 \vspace{5mm}
 \begin{SCn}
-scnheader{sc-pair}
-\begin{scnrelfromset}{partition}
+\scnheader{sc-pair}
+\begin{scnrelfromset}{subdividing}
 	\scnitem{unoriented sc-pair}
 	\scnitem{oriented sc-pair}
 	\begin{scnindent}
-		\begin{scnrelfromset}{partition}
-			\scnitem{sc-pair of belonging}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{sc-pair of membership}
 			\begin{scnindent}
-				\begin{scnrelfromset}{partition}
-					\scnitem{sc-fuzzy membership pair}
-					\scnitem{sc-pair of positive affiliation}
-					\scnitem{sc-pair of negative affiliation}
+				\begin{scnrelfromset}{subdividing}
+					\scnitem{sc-pair of fuzzy membership}
+					\scnitem{sc-pair of positive membership}
+					\scnitem{sc-pair of negative membership}
 				\end{scnrelfromset}
 			\end{scnindent}
 			\scnitem{oriented sc-pair that is not a membership sc-pair}	
@@ -573,26 +571,24 @@ scnheader{sc-pair}
 \justifying
 \vspace{5mm}
 \begin{SCn}
-scnheader{sc-positive pair}	
+\scnheader{sc-pair of positive membership}
 \scnsuperset{sc-pair of constant positive membership}
 \begin{scnindent}
 	\begin{scnreltoset}{intersection of sets}
 		\scnitem{sc-constant}
-		\scnitem{constant entity}
+		\scnitem{permanent entity}
 		\scnitem{static entity}
-		\scnitem{sc-pair of positive affiliation}	
+		\scnitem{sc-pair of positive membership}	
 	\end{scnreltoset}
 \end{scnindent}
-\scnsuperset{sc-pair of temporal positive belonging}
+\scnsuperset{sc-pair of temporal positive membership}
 \begin{scnindent}
 	\begin{scnreltoset}{intersection of sets}
 		\scnitem{sc-constant}
 		\scnitem{temporary entity}
 		\scnitem{dynamic entity}
-		\scnitem{sc-pair of positive affiliation}	
+		\scnitem{sc-pair of positive membership}	
 	\end{scnreltoset}
 \end{scnindent}
 \end{SCn}
 \end{frame}
-
-\fi
