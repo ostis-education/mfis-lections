@@ -1,0 +1,560 @@
+\title{Lecture 3\\External information constructs}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{\\Lecture Contents}
+	\topline
+	\justifying
+	The concept of an external information construct and its classification. The concept of an internal knowledge base file and its classification. The concept of an identifier and its typology. Examples of identifier formalization.
+\end{frame}
+
+\begin{frame}{\\information construct}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{information construct}
+		\scnidtf{construct (structure) containing some information about some entities}
+		\scnidtf{information model consisting of a certain set of different \textit{signs} denoting modeled (described) \textit{entities} of any kind and, in particular, \textit{signs} denoting various types of connections between the signs of the described \textit{entities} (such connections are most often reflections (models) of the connections between \textit{entities}, which are designated by the associated \textit{signs})}
+		\scntext{note}{The form of presentation ("image"{}, "materialization"{}), the form of structuring (syntactic structure), as well as the \textit{meaning*} (denotational semantics) of \textit{information constructs} can be very different.}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Discrete information construct}
+	\topline
+	\justifying
+	\begin{SCn}
+		\footnotesize
+		\scnheader{discrete information construct}
+		\scnsubset{information construct}
+		\scntext{explanation}{Each discrete information construct is an information construct defined by
+			\begin{textitemize}
+				\item set of elements (syntactically atomic fragments) of this information construction
+				\item alphabet of these elements -- a family of classes of syntactically equivalent elements of the information construct
+				\item belonging of each element of the information construct to the corresponding class of syntactically equivalent elements of the information construct
+				\item configuration of incidence links between elements of the information construct
+		\end{textitemize}}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Information constructs}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{information construct}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{internal information construct}
+			\begin{scnindent}
+				\scnidtf{informational construct stored in the memory of a certain cybernetic system and directly interpreted (understood) by the problem solver of this system}
+			\end{scnindent}
+			\scnitem{external information construct}
+			\begin{scnindent}
+				\scnidtf{information construct presented on some external medium or in the memory of another cybernetic system}
+			\end{scnindent}
+			\scnitem{file}
+			\begin{scnindent}
+				\scnidtf{main electronic image of some external information construct}
+			\end{scnindent}
+		\end{scnrelfromset}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\File}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{file}
+		\scnidtf{information construct that is not an sc-construct and that can be stored in the file memory of the ostis-system}
+		\scntext{\textit{note}}{The file memory of an \textit{ostis-system}, storing various kinds of \textit{information constructs} (images, models) that are not \textit{sc-constructs}, must be tightly linked to the \textit{sc-memory} of the same \textit{ostis-system}. At a minimum, each file of the \textit{ostis-system} must be connected with the \textit{sc-element} that is the sign of this file (more precisely, the sign of the singleton of which the specified file is an element)}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\File}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small{
+		\begin{SCn}
+			\scnheader{file}
+			\scnidtf{sc-node denoting a file}
+			\scnidtf{file sign}
+			\begin{scnrelfromset}{subdividing}
+				\scnitem{nl-file}
+				\begin{scnindent}
+					\scnidtf{natural language file}
+				\end{scnindent}
+				\scnitem{file that is the text of a formal language}
+				\begin{scnindent}
+					\scnsuperset{sc.g-file}
+					\scnsuperset{sc.n-file}
+					\scnsuperset{sc.s-file}
+				\end{scnindent}
+				\scnitem{file reflecting the process of sc.g-text changing}
+				\scnitem{graphic file}
+				\scnitem{image file}
+				\scnitem{video file}
+				\scnitem{audio file}
+			\end{scnrelfromset}
+			
+		\end{SCn}
+	}
+	
+\end{frame}
+
+\begin{frame}{\\File}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small{
+		\begin{SCn}
+			\scnheader{file}
+			\begin{scnrelfromset}{subdividing}
+				\scnitem{instance file}
+				\begin{scnindent}
+					\scnidtf{file that is a specific electronic document or an electronic image of a specific external information construct}
+				\end{scnindent}
+				\scnitem{pattern file}
+				\begin{scnindent}
+					\scnidtf{file-class of \textit{ostis-system}}
+					\scnidtf{file that is also a sign of a set of all possible instances (copies) of this file}
+				\end{scnindent}
+			\end{scnrelfromset}
+			\begin{scnrelfromset}{subdividing}
+				\scnitem{external file of the ostis-system}
+				\scnitem{\textbf{internal file of the ostis-system}}
+			\end{scnrelfromset}
+			
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\File}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{file}
+		\scntext{\textit{note}}{The representation of \textit{information constructs} as files is oriented toward the representation of \textit{discrete (!) information constructs}. Therefore, the "file"{} representation of \textit{non-discrete information constructs} (for example, various types of signals) presupposes the "discretization"{} of such constructs, i.e., their transformation into \textit{discrete} ones. This is how audio signals (in particular, voice messages), images, video signals, etc. are presented.}
+		
+	\end{SCn}
+	
+\end{frame}
+
+%Addition
+\iffalse
+\begin{frame}{\\Internal file}
+	\topline
+	\justifying
+	\begin{SCn}
+		\footnotesize
+		\scnheader{internal file of ostis-system}
+		\scniselement{syntactically distinguishable class of sc-elements within the SC-code}
+		\scniselement{semantically distinguishable class of sc-elements within the SC-code}
+		\scntext{\textit{note}}{This class of sc-elements, which are signs of files stored in the memory of \textit{ostis-systems}, unlike other syntactically distinguished classes of \textit{sc-elements}, is simultaneously a syntactically and semantically distinguished class of \textit{sc-elements}. This is due to the fact that
+			\begin{textitemize}
+				\item each instance of this class of \textit{sc-elements} is a sign of a specific file stored in the memory of the \textit{ostis-system}
+				\item each file stored in the memory of the \textit{ostis-system} can and must be designated only by such \textit{sc-element}, which is an instance of the class of \textit{sc-elements} under consideration.
+		\end{textitemize}}
+	\end{SCn}
+\end{frame}
+\fi
+
+\begin{frame}{\\Internal file}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{internal file of ostis-system}
+		\scntext{\textit{note}}{sc-node may be a sign of a file located in the memory of another ostis-system (not the one in which this sc-node is stored). But in this case, the specified sc-node will not belong to the considered class of sc-nodes.}
+		\scntext{\textit{note}}{It's important to distinguish between syntactic equivalence of files, semantic equivalence of files, and file coincidence (when we're talking about the same file). That is, a copy of a file and the same file are different things.}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Identifier}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{sc-identifier}
+		\scnidtf{character string or icon that one-to-one represents the corresponding \textit{sc-element} stored in \textit{sc-memory}}
+		\scnidtf{external identifier of the \textit{sc-element}}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{simple sc-identifier}
+			\begin{scnindent}
+				\scnidtf{simple external identifier of the \textit{sc-element}}
+			\end{scnindent}
+			\scnitem{sc-expression}
+			\begin{scnindent}
+				\scnidtf{complex external identifier of a \textit{sc-element}, which includes one or more identifiers of other \textit{sc-elements}}
+			\end{scnindent}
+		\end{scnrelfromset}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\scriptsize{
+		\begin{SCn}
+			\scnheader{sc-identifier}
+			\begin{scnrelfromset}{subdividing}
+				\scnitem{main sc-identifier}
+				\begin{scnindent}
+					\scnidtf{main \textit{sc-identifier} for speakers of an additionally specified language of communication (for example, the corresponding natural language)}
+					\scntext{\textit{note}}{\textit{main sc-identifier} is unique (has no synonyms or homonyms) within the corresponding natural language}
+					\scnsuperset{main international \textit{sc-identifier}}
+				\end{scnindent}
+				\scnitem{non-main sc-identifier}
+				\begin{scnindent}
+					\scnsuperset{(non-main \textit{sc-identifier} $\cap$ explanation)}
+					\begin{scnindent}
+						\scnidtf{non-main \textit{sc-identifier}, which is also an explanation of the designated entity}
+						\scnsuperset{(non-main \textit{sc-identifier} $\cap$ definition)}
+						\begin{scnindent}
+							\scnidtf{non-main \textit{sc-identifier}, which is also a definition of the designated concept}
+						\end{scnindent}
+					\end{scnindent}
+					\scnsuperset{non-main frequently used sc-identifier}
+				\end{scnindent}
+			\end{scnrelfromset}
+		\end{SCn}
+	}
+	
+\end{frame}
+
+\begin{frame}{\\Non-main sc-identifier}
+	\topline
+	\justifying
+	With the help of \textit{non-main sc-identifiers}, possible \textit{synonyms*} of the corresponding \textit{main sc-identifier} are indicated, which, in particular, can explain or even define the designated entity, indicating important properties of this entity.
+	
+	\bigskip
+	For some sc-elements, not only main but also secondary sc-identifiers may be frequently used (especially in informal texts—in explanations, notes, etc.). Explicitly identifying this class of sc-identifiers simplifies the semantic analysis of knowledge base source texts.
+\end{frame}
+
+\begin{frame}{\\Main sc-identifier}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{main sc-identifier}
+		\scnsubset{ostis-system pattern file}
+		\scnrelboth{\textit{semantic equivalence}}{\scnfilelong{All main identifiers of \textit{sc-elements} in the memory of the \textit{ostis-system} are considered as copyable pattern files of the \textit{ostis-system}.}}
+		\begin{scnindent}
+			\scntext{explanation}{Copies of the main \textit{sc-identifiers} are included in the external texts of various languages (\mbox{SCg-code}, SCs-code, SCn-code), and also in different word forms in the files of \textit{ostis-systems}.}
+		\end{scnindent}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Constructing the basic sc-identifier}
+	\topline
+	\justifying
+	Commonly accepted international conventions for certain entities, such as frequently used functions (sin, cos, tg, log, etc.), units of measurement, monetary units, and many others, can also be used as \textit{main sc-identifiers}. Formally, each main international sc-identifier is considered a main sc-identifier for each natural language, despite the fact that the signs used in main international sc-identifiers may not correspond to the alphabet of some or even all natural languages.
+\end{frame}
+
+\begin{frame}{\\Identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{sc-identifier}
+			\begin{scnrelfromset}{subdividing}
+				\scnitem{string sc-identifier}
+				\begin{scnindent}
+					\scnidtf{\textit{sc-identifier}, represented by a character string that is the name of the entity being designated}
+					\scnidtf{name of the entity denoted by the identified \textit{sc-element}}
+					\scnidtf{name (term, phrase) synonymous with the corresponding (identified) \mbox{sc-element} and represented in the corresponding character alphabet}
+				\end{scnindent}
+				\scnitem{non-string sc-identifier}	
+				\begin{scnindent}
+					\scntext{explanation}{In general, an arbitrary \textit{internal file of ostis-system}, such as an icon, a sign, or even an audio fragment, can serve as the \textit{sc-identifier} of a \textit{sc-element}.}	
+				\end{scnindent}
+			\end{scnrelfromset}
+			\scntext{note}{The \textit{sc-identifiers} we introduced are used in all external languages close to the SC-code -- in the SCg-code, in the SCs-code, and in the SCn-code.}
+		\end{SCn}
+	}
+	
+\end{frame}
+
+
+\begin{frame}{\\String sc-identifier}
+	\topline
+	\justifying
+	\small{
+		\begin{SCn}
+			\scnheader{string sc-identifier}
+			\scnidtf{name assigned to the identified \textit{sc-element}}
+			\scnidtf{name of the entity denoted by the identified \textit{sc-element}}
+			\scnidtf{character string synonymous with the corresponding identified \textit{sc-element}}
+			\scnsuperset{main string sc-identifier}
+			\begin{scnindent}
+				\scnidtf{unique external name for each natural language, assigned to the identified \textit{sc-element}}
+				\scnsuperset{main Russian sc-identifier}
+				\scnsuperset{main English sc-identifier}
+				\scnsuperset{main German sc-identifier}
+				\scnsuperset{main French sc-identifier}
+				\scnsuperset{main Italian sc-identifier}
+				\scnsuperset{main Chinese sc-identifier}
+			\end{scnindent}
+			\scnsuperset{system sc-identifier}
+		\end{SCn}
+	}
+	
+\end{frame}
+
+\begin{frame}{\\System sc-identifier}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{system sc-identifier}
+		\scnidtf{\textit{sc-identifier}, which is unique within the entire knowledge base \textit{OSTIS Ecosystem} (Global Knowledge Base).}
+		\scntext{explanation}{This \textit{sc-identifier} is typically used in knowledge base source code, when exchanging messages between \textit{ostis-systems}, and for interaction between the \textit{ostis-system} and components implemented using tools external to \textit{OSTIS Technology}, such as programs written in traditional programming languages. The alphabet of system \textit{sc-identifiers} has been simplified as much as possible to ensure the ease of automatic processing of such \textit{sc-identifiers} using modern technical means; in particular, spaces and various special characters are prohibited.}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Construction of system sc-identifiers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\footnotesize
+	The characters used in the \textit{system sc-identifier} can include Latin letters, digits, underscores, and dashes. To ensure internationalization, it is recommended that \textit{system sc-identifiers} be based on the main English-language \textit{sc-identifiers}.
+	
+	\bigskip
+	Therefore, it's most practical to generate a \textit{system sc-identifier} for a \textit{sc-element} from the basic English-language identifier by replacing all characters not included in the alphabet described above with the underscore (``\_''). Furthermore, uppercase letters are most often replaced with the corresponding lowercase letters.
+	
+	\bigskip	
+	To name sc-elements that are signs of \textit{role relations}, instead of the ``\scnrolesign'' sign in the \textit{system sc-identifier}, the prefix ``rrel'' is used, and then the name of the \textit{role relation} is written after an underscore.
+	
+\end{frame}
+
+\begin{frame}{\\Construction of system sc-identifiers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	To name sc-elements that are signs of \textit{non-role relations}, instead of the ``*'' sign in the \textit{system sc-identifier}, the prefix ``nrel'' is used, and then after the underscore, the name of the \textit{non-role relation} is written.\\
+	
+	\bigskip	
+	To name sc-elements that are signs of classes of \textit{concepts}~~in~~\textit{system sc-identifier}, the prefix ``concept'' is used, and then after the underscore the name of the \textit{class} is written.\\
+	
+	\bigskip
+	To name sc-elements that are signs of \textit{structures}~~in~~\textit{system sc-identifier}, the prefix ``struct'' is used, followed by the name of the \textit{structure} after an underscore.
+\end{frame}
+
+\begin{frame}{\\Non-translated sc-identifier}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{non-translated sc-identifier}
+		\scnsubset{system sc-identifier}
+		\scnidtf{\textit{sc-identifier}, not represented in the knowledge base of the \textit{ostis-system}}
+		\scnidtf{\textit{sc-identifier}, existing only outside the knowledge base of the \textit{ostis-system}}	
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Non-translated sc-identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\footnotesize
+	Non-translated sc-identifiers are used only within the source texts of \textit{knowledge bases} (including \textit{sc.s-texts}) and when exchanging messages between \textit{ostis-systems} in cases where it is necessary to use the name of the same \textit{sc-element} in several fragments of the source text of the \textit{knowledge base} or the transmitted message, but the specified \textit{sc-element} does not have a \textit{system sc-identifier} and it is impractical to enter it.
+	
+	\bigskip
+	Using \textit{non-translated sc-identifiers} improves the readability and structure of \textit{knowledge base} source texts, and also allows access to the same unnamed (within the knowledge base) \textit{sc-element} in different \textit{knowledge base} source text files or in different messages transmitted between \textit{ostis-systems}. Such \textit{sc-elements} are often \textit{structure} and \textit{link} signs.
+	
+	\bigskip
+	Thus, \textit{non-translated sc-identifiers} exist only outside the \textit{ostis-system knowledge base} and when forming a knowledge base from source texts or when immersing a received message into the knowledge base, the corresponding \textit{internal file of ostis-system} is not created.
+\end{frame}
+
+\begin{frame}{\\Identifier Differences}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small
+	System identifiers differ from the main ones, firstly, by the requirement for uniqueness within the entire knowledge base \textit{OSTIS Ecosystem} (and, therefore, independence from the external language), and secondly, by a simpler alphabet, convenient for automatic processing.
+	
+	\bigskip
+	\textit{System sc-identifiers} and \textit{non-translated sc-identifiers} perform similar functions related to the naming of \textit{sc-elements} at the level of source texts of \textit{knowledge bases} or messages transmitted between \textit{ostis-systems}.
+	
+	\bigskip		
+	Each \textit{system sc-identifier} is represented in the knowledge base as an \textit{internal file of ostis-system} and is associated with the corresponding \textit{sc-element} by a \textit{system \mbox{sc-identifier*}} relation pair. \textit{Non-translated  sc-identifiers} are not represented within the \textit{knowledge base}, do not have corresponding \textit{internal file of ostis-systems}, and are not associated with the \textit{sc-elements} they identify at the \textit{knowledge base} level.
+\end{frame}
+
+\begin{frame}{\\Simple sc-identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	A simple sc-identifier is an identifier of an sc-element that does not include identifiers of other sc-elements and that does not contain information about the entity it designates that can be translated into SC-code.
+	
+	\bigskip
+	A simple string sc-identifier is a simple sc-identifier that is a string (string) of characters that is the name (title) of the same entity as the sc-element being identified. Simple string sc-identifiers are the most common type of identifier assigned to sc-elements.
+\end{frame}
+
+
+\begin{frame}{\\Simple sc-identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small{
+		\begin{SCn}
+			\scnheader{simple string sc-identifier}
+			\scnsuperset{system sc-identifier}
+			\scnsuperset{simple string identifier of the sc-variable}
+			\begin{scnindent}
+				\scnhaselementrole{example}{\scnfilelong{\_var1}}
+			\end{scnindent}
+			\scnsuperset{simple string sc-identifier of a non-role relationship}
+			\begin{scnindent}
+				\scnidtf{simple string identifier of an sc-node that is a sign of a non-role relationship}
+				\scnhaselementrole{example}{\scnfilelong{set inclusion*}}
+			\end{scnindent}
+			\scnsuperset{simple string sc-identifier of the role relationship}
+			\begin{scnindent}
+				\scnidtf{simple string identifier of an sc-node that is a sign of a role relationship}
+				\scnhaselementrole{example}{\scnfilelong{term\scnrolesign}}
+			\end{scnindent}
+		\end{SCn}
+	}
+\end{frame}
+
+
+\begin{frame}{\\Simple sc-identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\scriptsize{
+		\begin{SCn}
+			\scnsuperset{simple string class of classes identifier}
+			\begin{scnindent}
+				\scnidtf{simple string identifier of an sc-node that is a class of classes}
+				\scnhaselementrole{example}{\scnfilelong{length\scnsupergroupsign}}
+			\end{scnindent}
+			\scnsuperset{sc-identifier of the external file of the ostis-system}
+			\begin{scnindent}
+				\scnidtf{URL identifier}
+				\scnhaselementrole{example}{\scnfilelong{"file:///home/user/image1.png"{}}}
+				\begin{scnindent}
+					\scntext{note}{This sc-identifier describes the absolute path to a file named "image1.png"{}}
+				\end{scnindent}	
+				\scnhaselementrole{example}{\scnfilelong{"file://image1.png"{}}}
+				\begin{scnindent}
+					\scntext{note}{This sc-identifier describes the relative path to a file named "image1.png"{}}
+				\end{scnindent}	
+				
+				\scnhaselementrole{example}{\scnfilelong{"https://conf.ostis.net/content/image1.png"{}}}
+				\begin{scnindent}
+					\scntext{note}{This sc-identifier describes the path to a file named "image1.png"{} located on a remote server.}
+				\end{scnindent}	
+			\end{scnindent}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\Simple sc-identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small{
+		\textit{sc-identifiers} of external ostis-system files are used to describe the location of external ostis-system files and are a character string constructed according to the URL standard and then enclosed in double quotation signs. The quotation signs are used to unambiguously identify the beginning and end of a given sc-identifier, as spaces are generally allowed in URLs. This is useful because sc-identifiers of this type are often used in source code files for ostis-system knowledge bases.
+		
+		\bigskip
+		From the perspective of OSTIS Technology, \textit{sc-identifiers} of external files of ostis-systems are simple string sc-identifiers, although they may contain special characters, such as "\%"{} or "/"{}. This is because these identifiers do not contain semantically significant information about the properties of the sc-element itself, designated by such a sc-identifier, but only information about its location in the current state of the ostis-system's external world.
+	}
+\end{frame}
+
+\begin{frame}{\\Simple sc-identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\textbf{The rules for constructing simple string sc-identifiers} include:
+	\begin{textitemize}
+		\item Alphabet of characters used in simple string\\ sc-identifiers;
+		\item Prefixes and suffixes used in simple string\\ sc-identifiers;
+		\item Separators and delimiters used in simple string sc-identifiers;
+		\item Rules for constructing \textit{proper names} and \textit{common nouns}, which are simple string sc-identifiers;
+		\item Rules for constructing simple string sc-identifiers, determined by different classes of identified sc-elements.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{\\Complex sc-identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	
+	\textbf{\textit{sc-expression}} -- an identifier that not only designates the corresponding entity, but also contains information that represents, as unambiguously as possible, a specification of the said entity.
+	
+	An unambiguous specification of an entity that is a concept is called the \underline{definition} of that concept
+\end{frame}
+
+\begin{frame}{\\Complex sc-identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\scriptsize{
+		\begin{SCn}
+			\scnheader{sc-expression}
+			\scnidtf{name of the corresponding {\normalfont(}named{\normalfont)} entity constructed according to the principle "that {\normalfont(}that{\normalfont)} which {\normalfont(}which{\normalfont)} is related in the specified way to other specified entities"{}}
+			\scnidtf{expression identifying the sc-element}
+			\scnidtf{identifier of an sc-element, which includes other identifiers and whose denotational semantics is precisely determined by a specific set of rules for constructing such complex identifiers, consisting of other identifiers related to each other in a certain way}
+			\scnidtf{complex identifier consisting of other identifiers}
+			\scnidtf{identifier that is a construction consisting of several other identifiers, as well as some separators and delimiters, and whose denotational semantics \underline{is uniquely} determined by the configuration of the specified construction}
+			\scnidtf{complex sc-identifier}
+			\scnidtf{complex (composite) external identifier of the sc-element}
+			\scnidtf{expression identifying the sc-element}
+			\scnidtf{sc-identifier, which includes one or more simple sc-identifiers}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\Complex sc-identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\scriptsize
+	\textbf{\textit{sc-expression}} is broken down into:
+	\begin{textitemize}
+		\item \textit{unoriented set sc-expression} -- sc-expression delimited by curly braces
+		\item \textit{sc-structure sc-expression} -- sc-expression denoting a structure represented in any known and easily defined language (Russian, English, SCg-code, SCs-code, SCn-code)
+		
+		\textit{sc-structure expression} denotes a structure containing sc-text semantically equivalent to the text (in some known language) enclosed in curly braces. Most often, such text is written in a formal language, such as SCs code, and can be automatically and unambiguously interpreted. It is possible that the specified text is written in a less informal language, such as Russian, but in this case, its automatic interpretation is significantly more complicated and, in general, is not always unambiguous.
+		
+		In the current implementation of knowledge base source code development tools, in accordance with the older version of the rules for constructing sc-expressions, instead of curly braces, \textit{sc-expression of the structure} is limited to square brackets with asterisks ("[*"{} and "*]"{}).
+		
+		\item \textit{oriented set sc-expression} -- sc-expression of a tuple, delimited by angle brackets and denoting an ordered (oriented) set of sc-elements, the order of which is determined by the sequence of their enumerated sc-identifiers.	
+	\end{textitemize}	
+\end{frame}
+
+\begin{frame}{\\Complex sc-identifier}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\scriptsize
+	\begin{textitemize}
+		\item \textit{sc-expression of the internal file of the ostis-system} -- sc-expression denoting \textit{internal file of the ostis-system}, the visual representation (image) of which is delimited by square brackets. sc-expression of the internal file of the ostis-system denotes \textit{internal file of the ostis-system}, the contents of which are enclosed in square brackets delimiting this sc-expression.
+		
+		Additional specification of the ostis-system's internal text file is easily accomplished using the SC-code. This includes the textit language used to represent the textit information construct that is the contents of the textit file, the encoding format, the author, and much more.
+		
+		\item \textit{sc-expression of the pattern file of the ostis-system} -- sc-expression, delimited by square brackets with exclamation signs.
+		
+		\item \textit{sc-expression constructed based on binary relation} -- sc-expression consisting of \underline{either} (1) \textit{sc-identifier} denoting a binary oriented relation, and (2) in brackets the sc-identifier of one of the elements of the first domain of the specified binary oriented relation, \underline{or} (1) sc-identifier denoting a binary \underline{un}oriented relation, and (2) in brackets the sc-identifier of one of the elements of the domain of definition of the specified binary unoriented relation. sc-expression constructed by specifying some binary relation (usually functional) and one of its arguments (in brackets).
+	\end{textitemize}	
+\end{frame}
+
+\begin{frame}{\\Complex sc-identifier}
+\topline
+\justifying
+\vspace*{\fill}\\
+\scriptsize
+	\begin{textitemize}
+		\item \textit{sc-expression built on the basis of an algebraic operation} -- sc-expression, delimited by parentheses and built by specifying \textit{sc-identifiers}, separated by the algebraic operation sign.;
+		\item \textit{sc-expression identifying sc-connector} -- sc-expression, delimited by brackets and identifying \textit{sc-connector}, incident with two specified sc-elements and having the type specified by the image of the corresponding sc.s-connector.
+		To simplify the perception and processing of \textit{sc-expressions identifying an sc-connector}, the following restriction is introduced: the first and third components of such an sc-expression can only be \textit{simple sc-identifier}. Within sc.s-texts, the use of sc.s-modifiers within \textit{sc-expressions identifying an sc-connector} is also permitted.	
+	\end{textitemize}
+\end{frame}
