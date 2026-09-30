@@ -8,7 +8,7 @@
 	\topline
 	\justifying
 	Basic principles of the basic language for knowledge representation in intelligent systems -- SC-code.
-	Alphabet, syntax, basic denotational semantics of SC-code.
+	Alphabet, syntax, basic dedesignational semantics of SC-code.
 	Syntactic and semantic classification of sc-elements.
 \end{frame}
 
@@ -256,7 +256,7 @@ Thus, any class of sc-elements can be identified explicitly by:\\
 \scriptsize
 
 \scnheader{sc-edge}
-\scnidtf{Class of \textit{sc-elements} that have, within the \textit{Core of SC-code}, the syntactic label \textit{designations of undirected sc-pairs}}
+\scnidtf{Class of \textit{sc-elements} that have, within the \textit{Core of SC-code}, the syntactic label \textit{designations of unoriented sc-pairs}}
 
 \scnheader{sc-arc of general type}
 \scnidtf{Class of \textit{sc-elements} that have, within the \textit{Core of SC-code}, the syntactic label \textit{designations of oriented sc-pairs that are not constant positive sc-pairs of membership}}
@@ -317,20 +317,20 @@ The basic classification features of \textit{sc-elements} include:
 \vspace{3mm}
 \footnotesize
 \begin{SCn}
-\scnheader{sc-set notation}
+\scnheader{sc-set designation}
 \begin{scnrelfromset}{subdividing}
-	\scnitem{sc-connection notation}
+	\scnitem{sc-link designation}
 	\begin{scnindent}
 		\begin{scnrelfromset}{subdividing}
 			\scnitem{sc-singleton designation}
-			\scnitem{sc-pair notation}
+			\scnitem{sc-pair designation}
 			\begin{scnindent}
 				\begin{scnrelfromset}{subdividing}
 					\scnitem{unoriented sc-pair designation}
 					\scnitem{oriented sc-pair designation}
 				\end{scnrelfromset}
 			\end{scnindent}
-			\scnitem{designation of an sc-connection that is neither a singleton nor a pair}
+			\scnitem{designation of an sc-link that is neither a singleton nor a pair}
 		\end{scnrelfromset}
 	\end{scnindent}
 	\scnitem{sc-class designation}
@@ -353,7 +353,7 @@ The basic classification features of \textit{sc-elements} include:
 			\scnitem{designation of an sc-pair of negative membership}
 		\end{scnrelfromset}
 	\end{scnindent}
-	\scnitem{denotation of an oriented sc-pair that is not a membership pair}
+	\scnitem{dedesignation of an oriented sc-pair that is not a membership pair}
 \end{scnrelfromset}
 \end{SCn}
 \end{frame}
@@ -397,23 +397,23 @@ The basic classification features of \textit{sc-elements} include:
 \end{SCn}
 \end{frame}
 
-\begin{frame}{\\Static entity indicator}%Possibly redundant
+\begin{frame}{\\Static entity feature}%Possibly redundant
 \topline
 \justifying
 \begin{SCn}
 \scnheader{sc-element}
-\scnrelfrom{subdividing}{Staticity indicator for entities denoted by sc-elements}
+\scnrelfrom{subdividing}{Staticity feature for entities denoted by sc-elements}
 \begin{scnindent}
 	\begin{scneqtoset}
 		\scnitem{static entity designation}
 		\begin{scnindent}
 			\scnidtf{designation of an entity, changes to which within the relevant period of time are considered insignificant}
-			\scnsuperset{notation for a static sc-set}
+			\scnsuperset{designation for a static sc-set}
 		\end{scnindent}
 		\scnitem{dynamic entity designation}
 		\begin{scnindent}
 			\scnidtf{designation of an entity changing over time}
-			\scnsuperset{notation for a dynamic sc-set}
+			\scnsuperset{designation for a dynamic sc-set}
 		\end{scnindent}
 	\end{scneqtoset}
 \end{scnindent}
@@ -523,20 +523,18 @@ This classification is completely analogous to the \textit{Structural classifica
 \justifying
 \begin{SCn}
 \scnheader{sc-set}
-\begin{scnindent}
-	\begin{scnrelfromset}{subdividing}
-		\scnitem{sc-link}
-		\begin{scnindent}
-			\begin{scnrelfromset}{subdividing}
-				\scnitem{sc-singleton}
-				\scnitem{sc-pair}
-				\scnitem{sc-connection that is neither a singleton nor a pair}
-			\end{scnrelfromset}
-		\end{scnindent}
-		\scnitem{sc-class}
-		\scnitem{sc-structure}
-	\end{scnrelfromset}
-\end{scnindent}
+\begin{scnrelfromset}{subdividing}
+	\scnitem{sc-link}
+	\begin{scnindent}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{sc-singleton}
+			\scnitem{sc-pair}
+			\scnitem{sc-link that is neither a singleton nor a pair}
+		\end{scnrelfromset}
+	\end{scnindent}
+	\scnitem{sc-class}
+	\scnitem{sc-structure}
+\end{scnrelfromset}
 \end{SCn}
 \end{frame}
 
