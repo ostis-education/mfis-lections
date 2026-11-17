@@ -1,0 +1,464 @@
+\title{Lecture 21\\The Concept of a Problem Solver}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{\\Lecture outline}
+	\topline
+	\justifying
+	\setlength{\emergencystretch}{2em}
+	Current approaches to problem solving in intelligent systems and problem-solving models. The concept, distinctive features, characteristics, and implementation of problem solvers. Limitations of current approaches and ways to address them. A problem solver as a hierarchy of agents that interact through shared semantic memory. Methods and tools for developing problem solvers.
+\end{frame}
+
+\begin{frame}{\\Current problem-solving approaches}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{solving problems using stored programs}
+			\scntext{explanation}{The system already has a program for the given class of problems. Solving a problem consists in finding that program and interpreting it on the given inputs. Systems that take this approach include those that use:
+			\begin{textitemize}
+				\item programs written in imperative or declarative languages, including logic and functional languages;
+				\item implementations of genetic algorithms;
+				\item neural network models of knowledge processing.
+			\end{textitemize}}
+		\end{SCn}
+		Even with a stored program, solving a problem can be difficult. The system must find the program using a specification and then interpret it.
+	}
+
+\end{frame}
+
+\begin{frame}{\\Current problem-solving approaches}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{solving problems when no solution program is known}
+			\scntext{explanation}{The system may have no ready-made program for the class to which the stated problem belongs. It then needs general-purpose methods for finding a solution, such as decomposition into subproblems, depth-first or breadth-first search, random search, trial and error, and bisection. It can also use inference models, including classical deduction, induction, and abduction, as well as models based on fuzzy logic, default logic, temporal logic, and others.}
+		\end{SCn}
+	}
+
+\end{frame}
+
+\begin{frame}{\\Current problem-solving approaches}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	Although these systems address many problems, the classes of problems they can solve are limited by the predefined techniques and algorithms available to them. Complex systems, such as integrated automation systems, must be able to use different types of knowledge and problem-solving models together to solve the same \textit{complex problem}. The system must also keep pace with technological development by incorporating improved models and methods. Such reconfiguration should occur \underline{during operation}, without repeatedly shutting down a whole production facility or parts of it.
+\end{frame}
+
+\begin{frame}{\\Problem solver}
+	\topline
+	\justifying
+	\begin{SCn}
+		\scnheader{problem solver}
+		\scnidtf{component of an intelligent system responsible for solving certain problems using available methods}
+		\scntext{distinctive feature}{A problem solver must solve problems even when the necessary information is not explicitly localized in the intelligent system's knowledge base. It must find that information during problem solving using suitable criteria.}
+
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Problem solver}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\begin{SCn}
+		\scnheader{problem solver of an OSTIS system}
+		\scnidtf{collection of all skills an OSTIS system currently possesses}
+		\scntext{explanation}{The approach to building problem solvers in \textit{OSTIS Technology} makes them modifiable. An \textit{OSTIS system} can acquire new \textit{skills}, improve existing ones, and even discard some to improve performance. Its solver can therefore be viewed as a collection of skills that is fixed at any given time and evolves throughout the system's lifetime.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Problem solver}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\begin{SCn}
+		\scnheader{problem solver of an OSTIS system}
+		\scnsuperset{unified problem solver of an OSTIS system}
+		\begin{scnindent}
+			\scnidtf{complete problem solver of an OSTIS system}
+			\scnidtf{integrated problem solver of an OSTIS system}
+			\scnidtf{problem solver of an OSTIS system that provides all its core and auxiliary functionality}
+		\end{scnindent}
+		\scnsuperset{hybrid problem solver of an OSTIS system}
+		\begin{scnindent}
+			\scnidtf{problem solver of an OSTIS system that implements two or more problem-solving models}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Problem solver}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small{
+		\begin{SCn}
+			\scnheader{unified problem solver of an OSTIS system}
+			\scntext{explanation}{A \textit{unified problem solver of an OSTIS system} generally solves problems related to:
+				\begin{textitemize}
+					\item providing the system's core functionality (e.g., solving explicitly stated problems at a user's request);
+					\item ensuring correctness and optimizing the OSTIS system itself (continuously throughout its lifecycle);
+					\item improving the skills of end users and developers of the OSTIS system;
+					\item automating and managing the development of the OSTIS system.
+			\end{textitemize}}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\Hybrid problem solver}
+	\topline
+	\justifying
+
+	\small
+	\begin{SCn}
+		\scnheader{hybrid problem solver}
+		\begin{scnrelfromset}{requirements}
+			\scnfileitem{At any given time, the solver must solve problems of the agreed class within the agreed time, and its results must satisfy known requirements. As in other computer systems, the correctness of solutions should be verified during development using dedicated methods such as unit testing and black-box testing.}
+			\scnitem{...}
+		\end{scnrelfromset}
+	\end{SCn}
+
+\end{frame}
+
+\begin{frame}{\\Hybrid problem solver}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{hybrid problem solver}
+			\begin{scnrelfromset}{requirements}
+				\scnitem{...}
+				\scnfileitem{\textbf{hybrid solver} must support \textbf{coordinated use of different problem-solving models} to solve the same complex problem when needed}
+				\scnfileitem{the solver must be easy to \textbf{modify}, with minimal effort required to change an existing implementation}
+				\scnfileitem{the solver's specification must be expressed in a language the system understands, for example the same representation used for the knowledge it processes. This lets the system analyze and optimize its solver, integrate components (including on its own), and assess their importance and suitability for particular problems. In other words, the intelligent system and its solver must support \textit{reflection}}
+			\end{scnrelfromset}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\Limitations of current approaches}
+	\topline
+	\justifying
+	\setlength{\emergencystretch}{2em}
+	\vspace*{\fill}\\
+	Many problem-solving models are implemented and used successfully. Their implementations follow different principles, however, and lack a common framework for implementing and integrating models. This has several consequences:
+	\begin{textitemize}
+		\item using different problem-solving models together within one system to solve the same complex problem is difficult. Combining models to solve a problem for which no algorithm is known in advance is virtually impossible;
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{\\Limitations of current approaches}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item technical solutions implemented in one system can rarely be reused in others, which limits component-based development of problem solvers and leads to extensive duplication;
+		\item comprehensive methods and tools for designing, implementing, and debugging different types of problem solver are largely absent.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{\\Limitations of current approaches}
+	\topline
+	\justifying
+	These problems have the following consequences:
+	\begin{textitemize}
+		\item each solver takes substantial effort and time to develop, increasing the cost of developing and maintaining intelligent systems;
+		\item existing solvers are difficult to modify. Adding components or changing existing ones during system operation is impossible or very difficult, making maintenance labor-intensive;
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{\\Limitations of current approaches}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\begin{textitemize}
+		\item developers of problem solvers must meet high professional requirements, partly because of:
+		\begin{textitemize}
+			\item the complexity of existing problem-solving formalisms, which are designed for interpretation by computers rather than people;
+			\item the inability to work at different levels of detail and identify sufficiently independent components at each level. This complicates design, testing, and debugging and adds coordination overhead when developers work in teams;
+			\item limited information support and automation for developers.
+		\end{textitemize}
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{\\Approaches to building problem solvers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\footnotesize{
+		Addressing these problems calls for models, methods, and tools for developing \textit{hybrid problem solvers}. Historically, two main approaches have emerged for building solvers for \textit{intelligent computer systems.}\\
+		\begin{SCn}
+			\scnheader{approaches to building problem solvers}
+			\scnhaselement{a fixed solver in the system}
+			\begin{scnindent}
+				\scntext{explanation}{The system has a fixed solver, such as a logical inference engine. A knowledge base is later added for the subject domain in which the system is to operate. These systems are known as empty expert systems or shells. The approach was generally used for relatively simple systems and is no longer widespread.}
+			\end{scnindent}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\Approaches to building problem solvers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{approaches to building problem solvers}
+			\scnhaselement{software tools for accessing information}
+			\begin{scnindent}
+				\scntext{explanation}{This widely used approach provides software tools for accessing stored information that work with popular programming languages. Examples include systems based on W3C standards such as \textbf{RDF}, \textbf{OWL}, and \textbf{SPARQL}, and graph database management systems such as \textbf{Neo4j}. The developer determines the solver's structure case by case. No standard fixes that structure. This approach offers flexibility, but differences in solver structure and development lead to incompatible components, duplication, and higher development and maintenance costs.}
+			\end{scnindent}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\Approaches to building problem solvers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small{
+		One comprehensive approach is the \textit{IACPaaS} project, which aims to build a cloud platform for intelligent services serving different purposes. It makes extensive use of libraries of reusable intelligent system components and uses a multi-agent approach for solvers and user interfaces. Some of its technical solutions are similar to those in \textit{OSTIS Technology}. \textit{IACPaaS} aims to provide diverse services that users select for themselves, while \textit{OSTIS Technology} aims to provide a common formal basis for combining different models to solve the same complex problem.
+	}
+\end{frame}
+
+\begin{frame}{\\Developing hybrid problem solvers}
+	\topline
+	\justifying
+	\setlength{\emergencystretch}{2em}
+	\vspace*{\fill}\\
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{developing hybrid problem solvers using a multi-agent approach}
+			\begin{scnrelfromset}{principles}
+				\scnfileitem{A multi-agent approach provides a basis for modeling hybrid solvers. It supports parallel asynchronous systems with distributed architectures and can improve solver modifiability and performance}
+				\scnfileitem{Decompose every problem-solving process into logically atomic actions to improve solver compatibility and modifiability}
+				\scnfileitem{Model the solver as a hierarchy of interconnected levels. Components at each level can then be designed, debugged, and verified independently of the others}
+			\end{scnrelfromset}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\Developing hybrid problem solvers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{hybrid problem solver of an OSTIS system}
+			\begin{scnrelfromset}{principles}
+				\scnfileitem{Represent \underline{all} information about the solver and the problems it solves in \textit{SC-code}, in the same knowledge base as the system's domain knowledge. This information generally includes:
+					\begin{textitemize}
+						\item specifications of the agents that make up the solver;
+						\item specifications of the methods interpreted by those agents;
+						\item specifications of all information processes performed by the agents in semantic memory, including constructs that synchronize parallel processes;
+						\item specifications of all problems those information processes are intended to solve.
+				\end{textitemize}}
+			\end{scnrelfromset}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\Advantages of this approach}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{hybrid problem solver of an OSTIS system}
+			\begin{scnrelfromset}{advantages}
+				\scnfileitem{agent autonomy, which keeps changes local as the solver evolves, reduces development effort, and makes the system resilient to some agents failing}
+				\scnfileitem{decentralized processing without a single control center, which also helps keep changes to the solver local}
+				\scnfileitem{parallel execution of information processes within and across agents, enabling distributed problem solving}
+				\scnfileitem{proactive behavior of agents and the multi-agent system as a whole, allowing a user to state a problem declaratively without specifying how to solve it}
+			\end{scnrelfromset}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\The multi-agent approach}
+	\topline
+	\justifying
+	\vspace{5mm}
+
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{multi-agent system model}
+			\scnrelfrom{part}{agent model}
+			\begin{scnindent}
+				\scntext{explanation}{A model of the agent itself, the classification of agents, and the concepts that characterize each agent in the system. A widely used model is BDI (belief-desire-intention), which represents each agent's beliefs, desires, and intentions in appropriate languages}
+			\end{scnindent}
+			\scnrelfrom{part}{environment model}
+			\begin{scnindent}
+				\scntext{explanation}{Describes the environment in which the agents operate, whose events they respond to, and which they can transform.}
+			\end{scnindent}
+			\scnrelfrom{part}{agent communication model}
+			\begin{scnindent}
+				\scntext{explanation}{Specifies the interaction language (message structure and classification) and how agents transmit messages}
+			\end{scnindent}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\The multi-agent approach}
+	\topline
+	\justifying
+	\vspace{5mm}
+
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{current multi-agent system}
+			\begin{scnrelfromset}{limitations}
+				\scnfileitem{The strong emphasis on BDI in most tools creates substantial overhead because each practical problem must be expressed in BDI terms. It also encourages separate languages for BDI components and an agent's knowledge of the external environment, leading to inconsistent representations and further overhead}
+				\scnfileitem{Most tools for building multi-agent systems use specialized languages for agent knowledge, often unsuitable for knowledge representation in general. This affects what agents know about themselves and what they know about their environment}
+			\end{scnrelfromset}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\The multi-agent approach}
+	\topline
+	\justifying
+	\vspace*{10mm}
+
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{current multi-agent system}
+			\begin{scnrelfromset}{limitations}
+				\scnfileitem{Nearly all existing tools assume agents exchange messages directly or through dedicated communication hubs. Each agent must therefore know enough about the other agents in the system, which consumes additional resources}
+				\scnfileitem{Many tools tightly couple the logical level of agent interaction to the physical implementation of the multi-agent system}
+				\scnfileitem{In most approaches, developers specify the environment separately for each multi-agent system. This broadens the possible uses of the tools but creates overhead and makes systems incompatible}
+			\end{scnrelfromset}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{\\The multi-agent approach}
+	\topline
+	\justifying
+	\vspace{10mm}
+
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{current multi-agent system}
+			\begin{scnrelfromset}{ways to address these problems}
+				\scnfileitem{Agents communicate according to the blackboard principle. The messages are specifications, in shared semantic memory, of the actions or processes agents perform to solve problems. The semantic memory itself is the communication medium}
+				\scnfileitem{The agents' external environment is the same semantic memory in which problems are formulated and through which the agents interact. A common environment makes different agent systems compatible}
+			\end{scnrelfromset}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{The multi-agent approach}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{current multi-agent system}
+			\begin{scnrelfromset}{ways to address these problems}
+				\scnfileitem{The specification of each agent is expressed in SC-code in the knowledge base}
+				\scnfileitem{Agents are synchronized at the level of the processes they perform to solve problems in semantic memory. Each agent acts as an abstract processor capable of solving a certain class of problems}
+				\scnfileitem{Each information process has associative access at any time to the necessary knowledge base fragments in semantic memory, except those locked by other processes. An agent need not store its own copy of information about the environment. As in classical multi-agent systems, each agent still holds only part of the information needed to solve the problem}
+			\end{scnrelfromset}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{Methodology for building problem solvers}
+	\topline
+	\justifying
+	\vspace*{10mm}
+
+	\begin{SCn}
+		\scnheader{methodology for building problem solvers}
+		\begin{scnrelfromvector}{stages}
+			\scnfileitem{Defining requirements and specifying the problem solver}
+			\scnfileitem{Assembling the group of sc-agents that make up the solver}
+			\scnfileitem{Designing algorithms for atomic sc-agents}
+			\scnfileitem{Implementing scp-programs}
+			\scnfileitem{Verifying the developed components}
+			\scnfileitem{Debugging the developed components and correcting errors}
+		\end{scnrelfromvector}
+	\end{SCn}
+
+\end{frame}
+
+\begin{frame}{Methodology for building problem solvers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\footnotesize{
+		\begin{SCn}
+			\scnheader{Defining requirements and specifying the problem solver}
+			\scntext{explanation}{At this stage, developers need to:
+				\begin{textitemize}
+					\item identify the problems the solver must solve;
+					\item consider possible ways to solve them and use that analysis to place the future solver in the overall hierarchy of solvers.
+				\end{textitemize}
+				Correct classification matters because the library of reusable OSTIS components may already contain a suitable solver. If it does not, the developer can add the newly developed solver for later reuse. The library is organized by semantic classification of problem solvers and their components.}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{Methodology for building problem solvers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small{
+		\begin{SCn}
+			\scnheader{Assembling the group of sc-agents that make up the solver}
+			\scntext{explanation}{If the library has no solver that meets all requirements, identify and specify all the components of a new solver. The result is a list of fully specified \textit{sc-agents} arranged in a hierarchy down to the \textit{atomic sc-agents}. Design the group to reuse as many available OSTIS components as possible. Components that are missing can be added to the library after implementation.}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{Methodology for building problem solvers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small{
+		\begin{SCn}
+			\scnheader{Designing algorithms for atomic sc-agents}
+			\scntext{explanation}{Design the algorithm of each \textit{atomic sc-agent}. Identify logically coherent fragments that can be implemented as separate \textit{scp-programs}, including programs that can run in parallel. This calls for a \textit{library of reusable abstract sc-agents} and a \textit{library of reusable sc-text processing programs} in various languages, including a \textit{library of reusable scp-programs}. Some \textit{scp-programs} implementing an \textit{sc-agent's} algorithm can then be reused from the appropriate library.}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{Methodology for building problem solvers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small{
+		\begin{SCn}
+			\scnheader{Implementing scp-programs}
+			\scntext{explanation}{The last implementation step is to implement the scp-programs already specified, or platform-level programs where needed.}
+
+			\scnheader{Verifying the developed components}
+			\scntext{explanation}{Components can be verified manually or with the tools in the system for automating the design of OSTIS problem solvers.}
+
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{Methodology for building problem solvers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small{
+		\begin{SCn}
+			\scnheader{Debugging components and correcting errors}
+			\scntext{explanation}{Debugging can in turn be broken down into the following stages:
+				\begin{textitemize}
+					\item debugging individual scp-programs or programs implemented at the platform level;
+					\item debugging individual atomic sc-agents;
+					\item debugging the non-atomic sc-agents that make up the solver;
+					\item debugging the solver as a whole.
+			\end{textitemize}}
+
+		\end{SCn}
+	}
+\end{frame}

@@ -1,0 +1,326 @@
+\title{Lecture 20\\Representation of Methods and Skills in a Knowledge Base}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{\\Lecture outline}
+	\topline
+	\justifying
+	Methods and their classification. Relations between methods. Denotational and operational semantics of methods. Examples of representation in a knowledge base. Languages for representing methods. Procedural methods in a knowledge base. Static and dynamic action arguments. Methods with dependencies between subactions. Problem-solving strategies and models. Skills and their classification. The relationship to the basic programming language for knowledge base processing.
+\end{frame}
+
+\begin{frame}{\\The concept of a method}
+	\topline
+	\justifying
+
+    A method describes how to carry out any or nearly any action (with exceptions specified explicitly),
+    provided it belongs to the relevant class of actions.
+
+    \begin{SCn}
+    \scnheader{method}
+    \scnrelto{second domain}{method*}
+    \scnidtf{generalized specification of how to perform actions in the relevant class}
+    \scnidtf{generalized specification of how to solve problems in the relevant class}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\The concept of a method}
+	\topline
+	\justifying
+    \begin{SCn}
+    \scnheader{method}
+    \scnidtf{knowledge of how to solve problems in the relevant class}
+    \scnsubset{knowledge}
+    \scniselement{type of knowledge}
+    \scnidtf{way}
+    \scnidtf{\textbf{program}}
+    \scnidtf{knowledge of how problems in the relevant class should be solved (a set of equivalent problems of the same or a similar type)}
+    \scnidtf{method (way) of solving problems in a given class}
+    \scnidtf{information (knowledge) sufficient to solve any \textit{problem} in the relevant \textit{class of problems} using the corresponding \textit{problem-solving model}}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\Classification of methods}
+	\topline
+	\justifying
+
+    \vspace{10mm}
+
+    Like actions and problems, methods can be grouped into classes. A \textbf{\textit{class of methods}} is a set of methods that can share a common representation or specification.
+    \begin{SCn}
+
+    \scnheader{class of methods}
+    \scnrelto{family of subclasses}{method}
+    \scnidtf{set of problem-solving methods for which a dedicated language, such as an sc-language, can represent the methods in the set}
+    \scnidtf{set of methods associated with a distinct problem-solving model}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\Classification of methods}
+	\topline
+	\justifying
+     \begin{SCn}
+     \scnheader{class of methods}
+    \scnhaselement{procedural problem-solving method}
+    \scnhaselement{declarative problem-solving method}
+    \scnhaselement{artificial neural network}
+    \scnhaselement{genetic "algorithm"{}}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\Classification of methods}
+	\topline
+	\justifying
+     \begin{SCn}
+	\scnheader{procedural problem-solving method}
+		\scnsuperset{algorithmic problem-solving method}
+    \scnheader{declarative problem-solving method}
+		\scnsuperset{production rule method for problem solving}
+		\scnsuperset{functional problem-solving method}
+		\scnsuperset{logical problem-solving method}
+    \scnheader{artificial neural network}
+		\scnidtf{class of problem-solving methods based on artificial neural networks}
+  \end{SCn}
+\end{frame}
+
+\begin{frame}{\\Relations on the set of methods}
+	\topline
+	\justifying
+	\setlength{\emergencystretch}{2em}
+	\begin{SCn}
+    \scnheader{relation defined on the set of methods}
+    \scnhaselement{submethod*}
+    \scnheader{submethod*}
+        \scnidtf{subroutine*}
+        \scnidtf{method used or called when implementing the given method*}
+\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Operational semantics of a method}
+	\topline
+	\justifying
+	\begin{SCn}
+    \scnheader{operational semantics of a method*}
+    \scnsubset{specification*}
+    \scnidtf{family of methods for interpreting the given method*}
+    \scnidtf{formal description of the interpreter for the given method*}
+    \scnrelfrom{second domain}{\textbf{operational semantics of a method}}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\Operational semantics of a method}
+	\topline
+	\justifying
+	\begin{SCn}
+    \scnheader{operational semantics of a method}
+    \scnsuperset{\textbf{complete representation of a method's operational semantics}}
+    \scnidtf{representation of the \textit{operational semantics of a method} detailed down to all \textit{specifications of elementary actions} performed while interpreting that \textit{method}}
+    \scnheader{complete representation of a method's operational semantics}
+    \scnidtf{representation of the \textit{operational semantics of a method} detailed down to all \textit{specifications of elementary actions} performed while interpreting that \textit{method}}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\Denotational semantics of a method}
+	\topline
+	\justifying
+ \begin{SCn}
+     \scnheader{declarative semantics of a method*}
+    \scnsubset{specification*}
+    \scnidtf{description of the system of concepts used by the method*}
+ \end{SCn}
+\end{frame}
+
+% \begin{frame}{\\Examples of representation in a knowledge base.}
+% 	\topline
+% 	\justifying
+
+% \end{frame}
+
+\begin{frame}{\\Languages for representing methods}
+	\topline
+	\justifying
+	\begin{SCn}
+    \scnheader{language for representing methods}
+    \scnidtf{method language}
+    \scnidtf{language for representing the methods of a particular class}
+    \scnidtf{language (for example, an sc-language) for representing the methods of the relevant class}
+    \scnsubset{language}
+    \scnidtf{programming language}
+    \scnsuperset{language for representing information-processing methods}
+    \scnsuperset{language for representing methods that solve problems in the external environment of cybernetic systems}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\Describing a procedural method}
+	\topline
+	\justifying
+
+    \vspace{0.33cm}
+
+    Consider a procedural program, or procedural method. Every \textbf{\textit{procedural program}} is a generalized plan for performing \textit{actions} of a given class. It is a \textit{semantic neighborhood; its key sc-element\scnrolesign} is the \textit{class of actions}, and it further specifies how the actions in that class are carried out.
+
+    \vspace{0.33cm}
+
+    What are traditionally called the input parameters of a \textit{procedural program} correspond to the arguments of each \textit{action} in the \textit{class of actions} that the \textit{procedural program} describes. The arguments take specific values when a \textit{plan} for executing a particular \textit{action} of the class is generated from the program.
+\end{frame}
+
+\begin{frame}{\\Describing a procedural method}
+	\topline
+	\justifying
+    \vspace{0.33cm}
+
+     Each \textit{procedural program} is a system of described actions with additional information for each action:
+    \begin{textitemize}
+        \item either a \textit{sequence of action execution*} (passing on initiation), in which execution or initiation depends on completion of one or all of the specified actions;
+        \item or an event in the knowledge base or external environment that serves as its initiation condition;
+        \item or a situation in the knowledge base or external environment that serves as its initiation condition.
+    \end{textitemize}
+\end{frame}
+
+%TODO
+% \begin{frame}{Example of a procedural method in a knowledge base.}
+% 	\topline
+% 	\justifying
+
+% \end{frame}
+
+% \begin{frame}{Static and dynamic action arguments.}
+% 	\topline
+% 	\justifying
+
+% \end{frame}
+
+% \begin{frame}{Example of a method with dependencies between subactions.}
+% 	\topline
+% 	\justifying
+
+% \end{frame}
+
+\begin{frame}{\\Problem-solving strategies}
+	\topline
+	\justifying
+	\setlength{\emergencystretch}{2em}
+
+	The literature on building problem solvers uses the concept of a \textbf{\textit{problem-solving strategy}}. We define it as a metamethod for finding a relevant known method or constructing a goal-directed sequence of applications of known methods, which may differ from one another.
+
+    \begin{SCn}
+    \scnheader{problem-solving strategy}
+    \scnsubset{method}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\Problem-solving models}
+	\topline
+	\justifying
+
+	\vspace{10mm}
+	By analogy with a problem-solving strategy, a \textbf{\textit{problem-solving model}} is a metamethod for interpreting the relevant class of methods.
+
+    \begin{SCn}
+    \scnheader{problem-solving model}
+    \scnsubset{method}
+    \scnidtf{metamethod}
+    \scnidtf{abstract machine for interpreting the relevant class of methods}
+    \scnidtf{hierarchical system of "microprograms"{} that interpret the relevant class of methods}
+    \scnsuperset{algorithmic problem-solving model}
+    \scnsuperset{synchronous (or asynchronous) parallel procedural problem-solving model}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\Problem-solving models}
+	\topline
+	\justifying
+    \begin{SCn}
+    \scnheader{problem-solving model}
+    \scnsuperset{production rule model for problem solving}
+    \scnsuperset{functional problem-solving model}
+    \scnsuperset{logical problem-solving model}
+    \scnsuperset{neural network problem-solving model}
+    \scnsuperset{genetic problem-solving model}
+    \scnheader{logical problem-solving model}
+        \scnsuperset{crisp logic problem-solving model}
+        \scnsuperset{fuzzy logic problem-solving model}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\Problem-solving models}
+	\topline
+	\justifying
+    \vspace{0.33cm}
+
+    Each \textit{problem-solving model} is defined by:
+    \begin{textitemize}
+        \item the corresponding class of problem-solving methods, i.e., the language in which its methods are represented;
+        \item the subject domain of that class of methods;
+        \item the ontology of that class of methods (i.e., the denotational semantics of the language that represents them);
+        \item the operational semantics of that class of methods.
+    \end{textitemize}
+    A problem-solving model associates a class of methods with the syntax, denotational semantics, and operational semantics of the language for representing its methods.
+\end{frame}
+
+\begin{frame}{\\Problem-solving models}
+	\topline
+	\justifying
+    \begin{SCn}
+    \scnheader{specification*}
+    \scnsuperset{\textbf{problem-solving model}*}
+    \scnheader{problem-solving model*}
+            \scneq{restriction of the relation on its first domain (specification*; class of methods)*}
+            \scnidtf{specification of a \textit{class of methods}*}
+            \scnidtf{specification of a \textit{language for representing methods}*}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\The concept of a skill}
+	\topline
+	\justifying
+
+	The union of a \textit{method} and its operational semantics, which specifies how to interpret the \textit{method}, is called a \textbf{\textit{skill}}.
+
+    \begin{SCn}
+    \scnheader{skill}
+    \scnidtf{ability}
+    \scnidtf{union of a \textit{method} with its exhaustive specification, the \textit{complete representation of the method's operational semantics}}
+    \scnidtf{method that can be fully interpreted, executed, or used by the cybernetic system in whose memory it is stored}
+    \end{SCn}
+\end{frame}
+
+\begin{frame}{\\The concept of a skill}
+	\topline
+	\justifying
+        \begin{SCn}
+        \scnheader{skill}
+        \scnidtf{method that the given cybernetic system knows how to apply}
+        \scnidtf{method + method for interpreting it}
+        \scnidtf{ability to solve the corresponding class of equivalent problems}
+        \scnidtf{method plus its operational semantics, which describes how the method is interpreted, executed, or implemented and is also the operational semantics of the corresponding problem-solving model}
+        \end{SCn}
+\end{frame}
+
+\begin{frame}{\\Classification of skills}
+	\topline
+	\justifying
+    \vspace{10mm}
+
+The concept of a \textit{skill} is central to building problem solvers because it combines the declarative and operational parts of the description of how to solve a class of problems.
+
+\textit{Skills} can be \textit{passive skills}, whose use an agent must explicitly initiate, or \textit{active skills}, which start on their own when the relevant situation arises in the knowledge base. An \textit{active skill} includes a \textit{method}, its operational semantics, and an \textit{sc-agent} that reacts to that situation and initiates interpretation of the \textit{method} of the \textit{skill}.
+\end{frame}
+
+\begin{frame}{Relationship to SCP}
+    \topline
+    \justifying
+
+ \begin{SCn}
+	\scnheader{method}
+	\scnsuperset{scp-program}
+
+	\scnheader{action}
+	\scnsuperset{scp-operator}
+
+	\scnheader{language for describing methods}
+	\scnhaselement{SCP}
+\end{SCn}
+
+\end{frame}
